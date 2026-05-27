@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================================
   // FLOATING PARTICLES (Hero only — desktop)
   // ============================================
-  const hero = document.querySelector('.hero');
+  const hero = document.querySelector('.hero-editorial');
   if (hero && !isMobile) {
     const particleContainer = document.createElement('div');
     particleContainer.className = 'hero-particles';
@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================================
   // HERO PARALLAX CONTENT (desktop only — causes jank on mobile)
   // ============================================
-  const heroContent = document.querySelector('.hero-content');
+  const heroContent = document.querySelector('.hero-editorial-content');
   if (heroContent && isDesktop) {
     window.addEventListener('scroll', () => {
       const scrolled = window.scrollY;
