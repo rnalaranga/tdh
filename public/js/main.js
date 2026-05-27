@@ -5,6 +5,13 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Mobile detection — skip heavy FX on touch devices
+  const isMobile = window.matchMedia('(max-width: 768px)').matches
+    || ('ontouchstart' in window)
+    || (navigator.maxTouchPoints > 0);
+
+  const isDesktop = window.matchMedia('(pointer: fine)').matches && !isMobile;
+
   // ============================================
   // PAGE LOADER BAR
   // ============================================
@@ -16,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================================
   // CURSOR GLOW (desktop only)
   // ============================================
-  if (window.matchMedia('(pointer: fine)').matches) {
+  if (isDesktop) {
     const cursor = document.createElement('div');
     cursor.className = 'cursor-glow';
     document.body.appendChild(cursor);
@@ -104,10 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================
-  // FLOATING PARTICLES (Hero only)
+  // FLOATING PARTICLES (Hero only — desktop)
   // ============================================
   const hero = document.querySelector('.hero');
-  if (hero) {
+  if (hero && !isMobile) {
     const particleContainer = document.createElement('div');
     particleContainer.className = 'hero-particles';
     hero.insertBefore(particleContainer, hero.firstChild);
@@ -264,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================================
   // 3D TILT EFFECT on service/testimonial cards
   // ============================================
-  if (window.matchMedia('(pointer: fine)').matches) {
+  if (isDesktop) {
     document.querySelectorAll('.service-card, .testimonial-card, .value-card, .why-feature').forEach(card => {
       const MAX = 10;
 
@@ -286,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================================
   // MAGNETIC BUTTONS
   // ============================================
-  if (window.matchMedia('(pointer: fine)').matches) {
+  if (isDesktop) {
     document.querySelectorAll('.btn, .nav-cta').forEach(btn => {
       const STRENGTH = 0.35;
 
@@ -382,10 +389,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================
-  // HERO PARALLAX CONTENT
+  // HERO PARALLAX CONTENT (desktop only — causes jank on mobile)
   // ============================================
   const heroContent = document.querySelector('.hero-content');
-  if (heroContent) {
+  if (heroContent && isDesktop) {
     window.addEventListener('scroll', () => {
       const scrolled = window.scrollY;
       if (scrolled < window.innerHeight) {
@@ -417,10 +424,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ============================================
-  // WHY-US SECTION ORBS
+  // WHY-US SECTION ORBS (desktop only)
   // ============================================
   const whyUs = document.querySelector('.why-us');
-  if (whyUs) {
+  if (whyUs && isDesktop) {
     const orbData = [
       { size: 300, top: '-80px', right: '-60px', type: 'orb-green', dur: '10s' },
       { size: 200, bottom: '-60px', left: '10%', type: 'orb-gold',  dur: '13s' },
@@ -439,10 +446,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================
-  // SERVICES PREVIEW ORBS
+  // SERVICES PREVIEW ORBS (desktop only)
   // ============================================
   const servicesPreview = document.querySelector('.services-preview');
-  if (servicesPreview) {
+  if (servicesPreview && isDesktop) {
     const orb1 = document.createElement('div');
     orb1.className = 'orb orb-dark';
     orb1.style.cssText = 'width:500px; height:500px; top:-100px; left:-100px; filter:blur(80px); animation-duration:14s; z-index:0;';
@@ -450,10 +457,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================
-  // TESTIMONIALS SECTION ORBS
+  // TESTIMONIALS SECTION ORBS (desktop only)
   // ============================================
   const testimonials = document.querySelector('.testimonials');
-  if (testimonials) {
+  if (testimonials && isDesktop) {
     const orb = document.createElement('div');
     orb.className = 'orb orb-green';
     orb.style.cssText = 'width:400px; height:400px; top:-100px; right:-80px; filter:blur(80px); animation-duration:12s; opacity:0.5;';
