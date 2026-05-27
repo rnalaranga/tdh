@@ -97,6 +97,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   letter-spacing: 0.01em;
+  position: relative;
+}
+
+/* Subtle organic noise to reduce sterile digital/AI look */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 9999;
 }
 
 /* ============================================
@@ -1126,28 +1138,21 @@ ul {
   height: 380px;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(13,31,23,0.06);
+  box-shadow: 0 4px 16px rgba(13,31,23,0.04), 0 1px 3px rgba(13,31,23,0.02);
 }
 
 .service-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(255,255,255,0);
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
-  pointer-events: none;
-  z-index: 2;
+  content: none;
 }
 
 .service-card:hover::after {
-  border-color: rgba(255,255,255,0.18);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+  content: none;
 }
 
 .service-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 32px 80px rgba(0,0,0,0.35), 0 0 0 1px rgba(82,183,136,0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(13,31,23,0.08), 0 4px 12px rgba(13,31,23,0.04);
 }
 
 .service-card-img {
@@ -1180,19 +1185,9 @@ ul {
     linear-gradient(to top, rgba(13,31,23,0.97) 0%, rgba(13,31,23,0.55) 45%, rgba(13,31,23,0.08) 100%);
 }
 
-/* Glass strip at bottom of card */
+/* Remove glass strip at bottom of card */
 .service-card-overlay::before {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 50%;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  mask-image: linear-gradient(to top, black 50%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to top, black 50%, transparent 100%);
-  pointer-events: none;
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-  z-index: -1;
+  content: none;
 }
 
 .service-card-tag {
@@ -1274,14 +1269,11 @@ ul {
 }
 
 .testimonial-card {
-  background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: white;
   border-radius: var(--radius-lg);
   padding: 36px;
-  box-shadow: 0 8px 32px rgba(13,31,23,0.08), inset 0 1px 0 rgba(255,255,255,0.9);
-  border: 1px solid rgba(45,106,79,0.08);
-  border-top: 1px solid rgba(255,255,255,0.85);
+  box-shadow: 0 4px 16px rgba(13,31,23,0.04), 0 1px 3px rgba(13,31,23,0.02);
+  border: 1px solid rgba(13,31,23,0.06);
   transition: var(--transition);
   position: relative;
   overflow: hidden;
@@ -1302,9 +1294,9 @@ ul {
 .testimonial-card:hover::before { transform: scaleX(1); }
 
 .testimonial-card:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 24px 64px rgba(13,31,23,0.14), inset 0 1px 0 rgba(255,255,255,0.95), 0 0 0 1px rgba(45,106,79,0.08);
-  background: rgba(255,255,255,0.92);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(13,31,23,0.08), 0 4px 12px rgba(13,31,23,0.04);
+  border-color: rgba(45,106,79,0.15);
 }
 
 .testimonial-card::before {
@@ -1952,15 +1944,12 @@ ul {
 }
 
 .value-card {
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: white;
   border-radius: var(--radius-lg);
   padding: 40px 28px;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(13,31,23,0.07), inset 0 1px 0 rgba(255,255,255,0.9);
-  border: 1px solid rgba(45,106,79,0.08);
-  border-top: 1px solid rgba(255,255,255,0.85);
+  box-shadow: 0 4px 16px rgba(13,31,23,0.04), 0 1px 3px rgba(13,31,23,0.02);
+  border: 1px solid rgba(13,31,23,0.06);
   transition: var(--transition);
   position: relative;
   overflow: hidden;
@@ -1980,9 +1969,9 @@ ul {
 .value-card:hover::before { transform: scaleX(1); }
 
 .value-card:hover {
-  transform: translateY(-10px) scale(1.01);
-  box-shadow: 0 24px 64px rgba(13,31,23,0.12), inset 0 1px 0 rgba(255,255,255,0.95), 0 0 0 1px rgba(45,106,79,0.12);
-  background: rgba(255,255,255,0.92);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(13,31,23,0.08), 0 4px 12px rgba(13,31,23,0.04);
+  border-color: rgba(45,106,79,0.15);
 }
 
 .value-icon {
@@ -2558,6 +2547,47 @@ ul {
 }
 
 /* ============================================
+   WHATSAPP FLOATING BUTTON
+   ============================================ */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 64px;
+  height: 64px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.35);
+  z-index: 1000;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 16px 48px rgba(37, 211, 102, 0.45), 0 0 24px rgba(37, 211, 102, 0.2);
+  color: white;
+}
+
+.whatsapp-float::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.4);
+  animation: waPulse 2s infinite;
+}
+
+@keyframes waPulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* ============================================
    RESPONSIVE — Full Mobile Fine-Tune
    ============================================ */
 
@@ -2855,6 +2885,14 @@ ul {
   .footer-grid { padding: 44px 0 32px; }
   .footer-social { gap: 10px; }
   .social-link { width: 38px; height: 38px; }
+
+  /* WhatsApp Adjust */
+  .whatsapp-float {
+    bottom: 24px;
+    right: 20px;
+    width: 54px;
+    height: 54px;
+  }
 
   /* CTA */
   .cta-text h2 { font-size: clamp(1.4rem, 8vw, 1.8rem); }
