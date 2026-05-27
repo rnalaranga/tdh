@@ -1,0 +1,111 @@
+<%- include('partials/header') %>
+<script>document.body.classList.add('light-nav');</script>
+
+<!-- Page Hero -->
+<section class="page-hero" id="gallery-hero">
+  <div class="container page-hero-inner">
+    <span class="section-label">Our Portfolio</span>
+    <h1 class="page-title">Garden <em style="font-style:italic; color: var(--green-pale);">Transformations</em></h1>
+    <p class="page-description">Browse our portfolio of stunning gardening and landscaping projects delivered across Australia. Every garden tells a unique story.</p>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="section" id="gallery-main" style="background: var(--warm-white);">
+  <div class="container">
+
+    <!-- Filter Buttons -->
+    <div class="gallery-filter" role="group" aria-label="Filter gallery by category">
+      <button class="filter-btn active" data-filter="all" id="filter-all">All Projects</button>
+      <button class="filter-btn" data-filter="landscaping" id="filter-landscaping">Landscaping</button>
+      <button class="filter-btn" data-filter="lawn" id="filter-lawn">Lawn Care</button>
+      <button class="filter-btn" data-filter="maintenance" id="filter-maintenance">Maintenance</button>
+      <button class="filter-btn" data-filter="design" id="filter-design">Garden Design</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid" id="gallery-grid">
+
+      <div class="gallery-item wide reveal" data-category="landscaping" data-src="/images/hero_garden.png" data-alt="Stunning Australian garden landscaping">
+        <img src="/images/hero_garden.png" alt="Stunning Australian garden landscaping" loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-text">Residential Garden — Melbourne, VIC</div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-category="lawn" data-src="/images/lawn_mowing.png" data-alt="Perfectly maintained lawn">
+        <img src="/images/lawn_mowing.png" alt="Perfectly maintained lawn" loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-text">Lawn Care — Sydney, NSW</div>
+        </div>
+      </div>
+
+      <div class="gallery-item tall reveal" data-category="landscaping" data-src="/images/landscaping_feature.png" data-alt="Native plant landscaping">
+        <img src="/images/landscaping_feature.png" alt="Native plant landscaping" loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-text">Native Garden Design — Brisbane, QLD</div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-category="design" data-src="/images/gallery_pool_garden.png" data-alt="Luxury pool garden design">
+        <img src="/images/gallery_pool_garden.png" alt="Luxury pool garden design" loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-text">Luxury Pool Garden — Gold Coast, QLD</div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-category="maintenance" data-src="/images/garden_maintenance.png" data-alt="Garden maintenance and care">
+        <img src="/images/garden_maintenance.png" alt="Garden maintenance and care" loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-text">Garden Maintenance — Perth, WA</div>
+        </div>
+      </div>
+
+      <div class="gallery-item wide reveal" data-category="design" data-src="/images/landscaping_feature.png" data-alt="Modern landscaping design">
+        <img src="/images/landscaping_feature.png" alt="Modern landscaping design" loading="lazy" style="object-position: bottom;" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-text">Contemporary Garden — Adelaide, SA</div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-category="lawn" data-src="/images/hero_garden.png" data-alt="Vibrant green lawn">
+        <img src="/images/hero_garden.png" alt="Vibrant green lawn" loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-text">Lawn Renewal — Hobart, TAS</div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-category="landscaping" data-src="/images/gallery_pool_garden.png" data-alt="Outdoor entertaining area">
+        <img src="/images/gallery_pool_garden.png" alt="Outdoor entertaining area" loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-text">Outdoor Living — Canberra, ACT</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">&times;</button>
+  <img src="" alt="" id="lightbox-img" />
+</div>
+
+<!-- CTA -->
+<section class="cta-banner" id="gallery-cta">
+  <div class="container">
+    <div class="cta-content">
+      <div class="cta-text reveal-left">
+        <h2>Ready to Create Your<br />Dream Garden?</h2>
+        <p>Let us bring our expertise to your outdoor space. Contact us today for a free consultation and quote.</p>
+      </div>
+      <div class="cta-actions reveal-right">
+        <a href="/contact" class="btn btn-white" id="gallery-cta-quote">Start Your Project</a>
+        <a href="/services" class="btn btn-outline" id="gallery-cta-services" style="color: white; border-color: rgba(255,255,255,0.5);">Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
