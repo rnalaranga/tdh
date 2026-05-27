@@ -24,6 +24,12 @@ app.use((req, res) => {
   res.status(404).render('404', { page: '404' });
 });
 
-app.listen(PORT, () => {
-  console.log(`\n🌿 TD Handy Man Australia — Server running at http://localhost:${PORT}\n`);
-});
+// Vercel එකේදී error එකක් එන එක නවත්තන්න local run වෙනකොට විතරක් listen කරනවා
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`\n🌿 TD Handy Man Australia — Server running at http://localhost:${PORT}\n`);
+  });
+}
+
+// Vercel එකට app එක හඳුන්වා දීමට අනිවාර්යයෙන්ම export කරන්න ඕනේ
+module.exports = app;
