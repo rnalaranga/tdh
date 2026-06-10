@@ -1,135 +1,98 @@
-<%- include('partials/header') %>
-<script>document.body.classList.add('light-nav');</script>
+<%- include('partials/header', { page: 'services', title: 'Our Expertise — TD HANDYMAN', description: 'Premium landscaping, rendering, retaining walls, and property maintenance.' }) %>
 
-<!-- Page Hero -->
-<section class="page-hero" id="services-hero">
-  <div class="container page-hero-inner">
-    <span class="section-label">What We Offer</span>
-    <h1 class="page-title">Professional Garden &<br /><em style="font-style:italic; color: var(--green-pale);">Landscaping Services</em></h1>
-    <p class="page-description">From routine lawn care to complete landscape transformations — our experienced team handles it all with care and expertise.</p>
+<!-- ─── PAGE HERO ────────────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <img src="/images/hero_handyman.png" alt="Our Expertise" />
+  </div>
+  <div class="container page-hero-content reveal">
+    <span class="eyebrow">Our Expertise</span>
+    <h1 class="section-title">Mastery in<br><em>Every Trade</em></h1>
   </div>
 </section>
 
-<!-- Services Full List -->
-<section class="section services-full" id="services-list">
+<!-- ─── SERVICES LIST ────────────────────────────────────────────────────── -->
+<section class="section" style="padding-top: 0;">
   <div class="container">
-    <div class="services-list">
-
-      <!-- Lawn Care -->
-      <div class="service-item" id="lawn-care">
-        <div class="service-img-wrap reveal-left">
-          <span class="service-img-tag">Most Popular</span>
-          <img src="/images/lawn_mowing.png" alt="Professional lawn mowing and care" />
-        </div>
-        <div class="service-content reveal-right">
-          <span class="section-label">Lawn Services</span>
-          <h2>Lawn Mowing &amp; Care</h2>
-          <p>A well-maintained lawn is the foundation of any beautiful Australian garden. Our team provides precise, professional lawn care services tailored to your grass type and the Australian climate — ensuring your lawn stays lush, green, and healthy all year round.</p>
-          <ul class="service-features-list">
-            <li class="service-feature-item">Regular & one-off lawn mowing</li>
-            <li class="service-feature-item">Edge trimming and lawn edging</li>
-            <li class="service-feature-item">Fertilisation and weed treatment</li>
-            <li class="service-feature-item">Aerating and lawn dethatching</li>
-            <li class="service-feature-item">Turf laying and lawn repair</li>
+    <div class="service-list">
+      
+      <!-- Service 1: Landscaping -->
+      <div class="service-row" id="landscaping">
+        <div class="service-text reveal">
+          <span class="service-meta">01 / Outdoor Living</span>
+          <h2>Landscaping</h2>
+          <p>
+            We sculpt outdoor spaces that breathe life into your property. From lush garden beds to comprehensive landscape architecture, our approach ensures harmony between nature and structure.
+          </p>
+          <ul class="service-features">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Complete Garden Design</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Premium Turf Installation</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Hardscaping & Paths</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Plant Selection</li>
           </ul>
-          <a href="/contact" class="btn btn-primary" id="lawn-quote-btn">
-            Get a Quote
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+        </div>
+        <div class="service-image reveal" style="transition-delay: 200ms;">
+          <img src="/images/service_landscaping.png" alt="Premium Landscaping" />
         </div>
       </div>
 
-      <!-- Landscaping -->
-      <div class="service-item reverse" id="landscaping">
-        <div class="service-img-wrap reveal-right">
-          <span class="service-img-tag">Full Service</span>
-          <img src="/images/landscaping_feature.png" alt="Landscaping design and build" />
-        </div>
-        <div class="service-content reveal-left">
-          <span class="section-label">Design & Build</span>
-          <h2>Landscaping Design</h2>
-          <p>Transform your outdoor space with a custom landscape design that reflects your lifestyle and complements your home. Our designers work with you to create a practical, beautiful garden that makes the most of Australia's unique environment.</p>
-          <ul class="service-features-list">
-            <li class="service-feature-item">Custom landscape design consultation</li>
-            <li class="service-feature-item">Native and exotic plant selection</li>
-            <li class="service-feature-item">Retaining walls and garden structures</li>
-            <li class="service-feature-item">Paving, decking and outdoor areas</li>
-            <li class="service-feature-item">Water features and garden lighting</li>
+      <!-- Service 2: Retaining Walls -->
+      <div class="service-row reverse" id="retaining-walls">
+        <div class="service-text reveal">
+          <span class="service-meta">02 / Structural Integrity</span>
+          <h2>Retaining Walls</h2>
+          <p>
+            Structural excellence meets aesthetic appeal. Our retaining walls are engineered for longevity and designed to complement the architectural language of your home.
+          </p>
+          <ul class="service-features">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Concrete Sleepers</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Natural Stone Walls</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Timber Solutions</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Earthworks & Drainage</li>
           </ul>
-          <a href="/contact" class="btn btn-primary" id="landscape-quote-btn">
-            Get a Quote
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+        </div>
+        <div class="service-image reveal" style="transition-delay: 200ms;">
+          <img src="/images/service_retaining_walls.png" alt="Retaining Walls" />
         </div>
       </div>
 
-      <!-- Garden Maintenance -->
-      <div class="service-item" id="garden-maintenance">
-        <div class="service-img-wrap reveal-left">
-          <span class="service-img-tag">Ongoing Care</span>
-          <img src="/images/garden_maintenance.png" alt="Garden maintenance and pruning" />
-        </div>
-        <div class="service-content reveal-right">
-          <span class="section-label">Maintenance</span>
-          <h2>Garden Maintenance</h2>
-          <p>Keep your garden thriving with our comprehensive maintenance programs. Whether it's weekly, fortnightly or monthly, our team will ensure your garden always looks its absolute best throughout all Australian seasons.</p>
-          <ul class="service-features-list">
-            <li class="service-feature-item">Regular weeding and mulching</li>
-            <li class="service-feature-item">Seasonal planting and replanting</li>
-            <li class="service-feature-item">Fertilisation and soil treatment</li>
-            <li class="service-feature-item">Pest and disease management</li>
-            <li class="service-feature-item">General garden tidy and clean-up</li>
+      <!-- Service 3: Rendering -->
+      <div class="service-row" id="rendering">
+        <div class="service-text reveal">
+          <span class="service-meta">03 / Finishing Touch</span>
+          <h2>Rendering & Painting</h2>
+          <p>
+            Completely transform the facade of your property. We apply flawless, modern rendering and precision painting that dramatically elevates curb appeal and value.
+          </p>
+          <ul class="service-features">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Acrylic & Cement Render</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Facade Modernisation</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Interior Repaints</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Texture Coating</li>
           </ul>
-          <a href="/contact" class="btn btn-primary" id="maintenance-quote-btn">
-            Get a Quote
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+        </div>
+        <div class="service-image reveal" style="transition-delay: 200ms;">
+          <img src="/images/service_rendering.png" alt="Rendering and Painting" />
         </div>
       </div>
 
-      <!-- Pruning -->
-      <div class="service-item reverse" id="pruning">
-        <div class="service-img-wrap reveal-right">
-          <img src="/images/hero_garden.png" alt="Tree and hedge pruning" />
-        </div>
-        <div class="service-content reveal-left">
-          <span class="section-label">Tree & Hedge</span>
-          <h2>Pruning &amp; Trimming</h2>
-          <p>Proper pruning keeps your trees and hedges healthy, safe, and looking spectacular. Our team uses the right techniques for every plant type — stimulating healthy growth while maintaining the shape and structure you want.</p>
-          <ul class="service-features-list">
-            <li class="service-feature-item">Tree pruning and crown shaping</li>
-            <li class="service-feature-item">Hedge trimming and shaping</li>
-            <li class="service-feature-item">Shrub pruning and formative pruning</li>
-            <li class="service-feature-item">Stump grinding and removal</li>
-            <li class="service-feature-item">Green waste disposal</li>
+      <!-- Service 4: Tiling -->
+      <div class="service-row reverse" id="tiling">
+        <div class="service-text reveal">
+          <span class="service-meta">04 / Precision Craft</span>
+          <h2>Tiling & Wall Moulding</h2>
+          <p>
+            From expansive outdoor patios to intricate interior wainscoting. Our meticulous attention to detail ensures perfect alignment, seamless grout lines, and flawless architectural accents.
+          </p>
+          <ul class="service-features">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Porcelain & Ceramic</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Natural Stone Tiling</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Feature Wainscoting</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Skirting & Architraves</li>
           </ul>
-          <a href="/contact" class="btn btn-primary" id="pruning-quote-btn">
-            Get a Quote
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
         </div>
-      </div>
-
-      <!-- Irrigation -->
-      <div class="service-item" id="irrigation">
-        <div class="service-img-wrap reveal-left">
-          <img src="/images/gallery_pool_garden.png" alt="Garden irrigation systems" />
-        </div>
-        <div class="service-content reveal-right">
-          <span class="section-label">Water Management</span>
-          <h2>Irrigation Systems</h2>
-          <p>Smart irrigation is essential in Australia's climate. We design and install efficient drip and sprinkler systems that keep your garden hydrated while reducing water waste — saving you money and protecting the environment.</p>
-          <ul class="service-features-list">
-            <li class="service-feature-item">Custom drip irrigation design</li>
-            <li class="service-feature-item">Sprinkler system installation</li>
-            <li class="service-feature-item">Smart timer and controller setup</li>
-            <li class="service-feature-item">Rainwater tank integration</li>
-            <li class="service-feature-item">System servicing and repairs</li>
-          </ul>
-          <a href="/contact" class="btn btn-primary" id="irrigation-quote-btn">
-            Get a Quote
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+        <div class="service-image reveal" style="transition-delay: 200ms;">
+          <img src="/images/service_tiling.png" alt="Tiling and Wall Moulding" />
         </div>
       </div>
 
@@ -137,22 +100,13 @@
   </div>
 </section>
 
-<!-- CTA Banner -->
-<section class="cta-banner" id="services-cta">
-  <div class="container">
-    <div class="cta-content">
-      <div class="cta-text reveal-left">
-        <h2>Not Sure Which Service<br />You Need?</h2>
-        <p>Contact us for a free consultation. Our experts will assess your space and recommend the best solution for your garden and budget.</p>
-      </div>
-      <div class="cta-actions reveal-right">
-        <a href="/contact" class="btn btn-white" id="services-cta-quote">Book Consultation</a>
-        <a href="tel:+61400000000" class="btn btn-outline" id="services-cta-call" style="color: white; border-color: rgba(255,255,255,0.5);">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          +61 400 000 000
-        </a>
-      </div>
-    </div>
+<!-- ─── CTA ──────────────────────────────────────────────────────────────── -->
+<section class="section section-bg-alt text-center">
+  <div class="container reveal">
+    <span class="eyebrow">Start Your Project</span>
+    <h2 class="section-title">Ready to Elevate<br><em>Your Property?</em></h2>
+    <br>
+    <a href="/contact" class="btn btn-primary">Book a Consultation</a>
   </div>
 </section>
 

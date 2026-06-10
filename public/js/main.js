@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================================
   // FLOATING PARTICLES (Hero only — desktop)
   // ============================================
-  const hero = document.querySelector('.hero-editorial');
+  const hero = document.querySelector('.hero-glass');
   if (hero && !isMobile) {
     const particleContainer = document.createElement('div');
     particleContainer.className = 'hero-particles';
@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================================
   // HERO PARALLAX CONTENT (desktop only — causes jank on mobile)
   // ============================================
-  const heroContent = document.querySelector('.hero-editorial-content');
+  const heroContent = document.querySelector('.hero-glass-card');
   if (heroContent && isDesktop) {
     window.addEventListener('scroll', () => {
       const scrolled = window.scrollY;
@@ -506,5 +506,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const pct   = total > 0 ? (window.scrollY / total) * 100 : 0;
     progressBar.style.width = pct + '%';
   }, { passive: true });
+
+  // ============================================
+  // THEME TOGGLE
+  // ============================================
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', newTheme === 'light' ? '#F4F7FA' : '#050914');
+      }
+    });
+  }
 
 });

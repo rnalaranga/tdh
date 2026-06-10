@@ -6,8 +6,8 @@ const nodemailer = require('nodemailer');
 router.get('/', (req, res) => {
   res.render('index', {
     page: 'home',
-    title: 'TD Handy Man Australia — Expert Gardening & Landscaping',
-    description: 'Professional gardening, landscaping, and garden maintenance services across Australia. Trusted local experts transforming outdoor spaces.'
+    title: 'TD HANDYMAN — Expert Property Maintenance & Handyman Services',
+    description: 'Professional handyman, landscaping, retaining walls, rendering, and property maintenance services in South East Melbourne, Victoria.'
   });
 });
 
@@ -15,8 +15,8 @@ router.get('/', (req, res) => {
 router.get('/services', (req, res) => {
   res.render('services', {
     page: 'services',
-    title: 'Our Services — TD Handy Man Australia',
-    description: 'Comprehensive gardening and landscaping services including lawn care, garden design, pruning, irrigation, and more across Australia.'
+    title: 'Our Services — TD HANDYMAN',
+    description: 'Comprehensive handyman and property services including landscaping, tiling, painting, retaining walls, and modern wall moulding in Melbourne.'
   });
 });
 
@@ -24,8 +24,8 @@ router.get('/services', (req, res) => {
 router.get('/gallery', (req, res) => {
   res.render('gallery', {
     page: 'gallery',
-    title: 'Project Gallery — TD Handy Man Australia',
-    description: 'Browse our portfolio of stunning garden transformations and landscaping projects across Australia.'
+    title: 'Project Gallery — TD HANDYMAN',
+    description: 'Browse our portfolio of stunning property transformations, landscaping projects, and handyman work across South East Melbourne.'
   });
 });
 
@@ -33,8 +33,8 @@ router.get('/gallery', (req, res) => {
 router.get('/about', (req, res) => {
   res.render('about', {
     page: 'about',
-    title: 'About Us — TD Handy Man Australia',
-    description: 'Learn about TD Handy Man Australia — a passionate team of local gardening and landscaping professionals serving communities across Australia.'
+    title: 'About Us — TD HANDYMAN',
+    description: 'Learn about TD HANDYMAN — a passionate team of local property maintenance and handyman professionals serving South East Melbourne.'
   });
 });
 
@@ -42,8 +42,8 @@ router.get('/about', (req, res) => {
 router.get('/contact', (req, res) => {
   res.render('contact', {
     page: 'contact',
-    title: 'Contact Us — TD Handy Man Australia',
-    description: 'Get a free quote or book a service with TD Handy Man Australia. We serve residential and commercial clients across Australia.',
+    title: 'Contact Us — TD HANDYMAN',
+    description: 'Get a free quote or book a service with TD HANDYMAN. We serve residential clients across South East Melbourne, Victoria.',
     success: false,
     error: false
   });
@@ -57,8 +57,8 @@ router.post('/contact', async (req, res) => {
   if (!name || !email || !message) {
     return res.render('contact', {
       page: 'contact',
-      title: 'Contact Us — TD Handy Man Australia',
-      description: 'Get in touch with TD Handy Man Australia.',
+      title: 'Contact Us — TD HANDYMAN',
+      description: 'Get in touch with TD HANDYMAN.',
       success: false,
       error: 'Please fill in all required fields.'
     });
@@ -78,7 +78,7 @@ router.post('/contact', async (req, res) => {
   });
   await transporter.sendMail({
     from: email,
-    to: 'info@tdhandyman.com.au',
+    to: 'tdmnptyltd@gmail.com',
     subject: `New Enquiry from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\nMessage:\n${message}`
   });
@@ -86,8 +86,8 @@ router.post('/contact', async (req, res) => {
 
   res.render('contact', {
     page: 'contact',
-    title: 'Contact Us — TD Handy Man Australia',
-    description: 'Get in touch with TD Handy Man Australia.',
+    title: 'Contact Us — TD HANDYMAN',
+    description: 'Get in touch with TD HANDYMAN.',
     success: true,
     error: false
   });

@@ -27,7 +27,7 @@ app.use((req, res) => {
 // Vercel එකේදී error එකක් එන එක නවත්තන්න local run වෙනකොට විතරක් listen කරනවා
 if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => {
-    console.log(`\n🌿 TD Handy Man Australia — Server running at http://localhost:${PORT}\n`);
+    console.log(`\n🔧 TD HANDYMAN — Server running at http://localhost:${PORT}\n`);
   });
 }
 

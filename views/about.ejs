@@ -1,139 +1,96 @@
-<%- include('partials/header') %>
-<script>document.body.classList.add('light-nav');</script>
+<%- include('partials/header', { page: 'about', title: 'Our Story — TD HANDYMAN', description: 'About TD HANDYMAN and our property maintenance experts.' }) %>
 
-<!-- Page Hero -->
-<section class="page-hero" id="about-hero">
-  <div class="container page-hero-inner">
-    <span class="section-label">Our Story</span>
-    <h1 class="page-title">Proudly <em style="font-style:italic; color: var(--green-pale);">Australian</em></h1>
-    <p class="page-description">A local team with deep roots in Australian gardening and landscaping — passionate about transforming outdoor spaces across the country.</p>
+<!-- ─── PAGE HERO ────────────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <img src="/images/about_team_new.png" alt="TD HANDYMAN Team" />
+  </div>
+  <div class="container page-hero-content reveal">
+    <span class="eyebrow">Our Story</span>
+    <h1 class="section-title">Built on <em>Excellence</em></h1>
   </div>
 </section>
 
-<!-- About Story -->
-<section class="section about-story" id="about-story">
+<!-- ─── ABOUT STORY ──────────────────────────────────────────────────────── -->
+<section class="section">
   <div class="container">
-    <div class="about-story-grid">
-
-      <div class="about-img-stack reveal-left">
-        <img src="/images/hero_garden.png" alt="TD Handy Man Australia team at work" class="about-img-main" />
-        <img src="/images/about_team.png" alt="Our team of gardening professionals" class="about-img-accent" />
-        <div class="about-experience-badge">
-          <div class="num">12</div>
-          <div class="label">Years in<br />Business</div>
+    <div class="about-grid">
+      <div class="reveal">
+        <h2 class="section-title">Over a Decade of<br><em>Craftsmanship</em></h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 24px;">
+          TD HANDYMAN was founded with a singular vision: to bring exceptional quality and unparalleled reliability to property maintenance in South East Melbourne. 
+        </p>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
+          What started as a small local trade business has grown into a comprehensive property services firm. We specialize in the difficult trades—retaining walls, rendering, and high-end landscaping—while maintaining the same personal touch and meticulous attention to detail that our very first clients experienced.
+        </p>
+        
+        <div style="margin-top: 40px; border-top: 1px solid var(--border-light); padding-top: 24px;">
+          <span style="font-family: var(--font-heading); font-size: 1.5rem; display: block; margin-bottom: 4px;">TD HANDYMAN</span>
+          <span style="font-family: var(--font-body); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-gold);">Founders & Master Craftsmen</span>
         </div>
       </div>
-
-      <div class="about-content reveal-right">
-        <span class="section-label">About Us</span>
-        <h2 class="section-title">Grown From a<br /><em>Love of the Land</em></h2>
-
-        <p class="section-subtitle" style="max-width: 100%; margin-bottom: 24px;">
-          TD Handy Man Australia was founded with a simple belief: every Australian home deserves a beautiful outdoor space. What started as a one-man operation has grown into a trusted team of passionate gardeners and landscapers serving clients across the country.
-        </p>
-        <p class="section-subtitle" style="max-width: 100%; margin-bottom: 24px;">
-          We have a deep respect for Australia's unique flora and fauna, which shapes everything we do — from plant selection to water management. Whether you have a small suburban courtyard or a sprawling rural property, we bring the same care and expertise to every job.
-        </p>
-        <p class="section-subtitle" style="max-width: 100%; margin-bottom: 40px;">
-          We're fully licensed and insured, and we take pride in our transparent pricing, reliable scheduling, and the quality of our workmanship. Your satisfaction is our guarantee.
-        </p>
-
-        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-          <a href="/contact" class="btn btn-primary" id="about-get-quote">Get a Free Quote</a>
-          <a href="/services" class="btn btn-outline" id="about-our-services">Our Services</a>
-        </div>
+      
+      <div class="reveal" style="position: relative; padding: 40px;">
+        <!-- Image with Border Frame -->
+        <div style="position: absolute; top: 0; left: 0; width: 60%; height: 60%; border-top: 1px solid var(--accent-gold); border-left: 1px solid var(--accent-gold);"></div>
+        <div style="position: absolute; bottom: 0; right: 0; width: 60%; height: 60%; border-bottom: 1px solid var(--accent-gold); border-right: 1px solid var(--accent-gold);"></div>
+        <img src="/images/about_team_new.png" alt="Team at work" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; filter: grayscale(20%); position: relative; z-index: 1;" />
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- Values -->
-<section class="section about-values" id="our-values">
+<!-- ─── STATS SECTION ────────────────────────────────────────────────────── -->
+<section class="section section-bg-alt">
   <div class="container">
-    <div style="text-align: center;">
-      <span class="section-label">Our Values</span>
-      <h2 class="section-title" style="margin: 0 auto 16px;">What We Stand For</h2>
-      <p class="section-subtitle" style="margin: 0 auto;">The principles that guide every project we take on.</p>
+    <div class="about-stats reveal">
+      <div style="text-align: center;">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div style="text-align: center;">
+        <div class="stat-num">1000+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
     </div>
+  </div>
+</section>
 
+<!-- ─── OUR VALUES ───────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="eyebrow">Our Principles</span>
+      <h2 class="section-title">The TD HANDYMAN <em>Difference</em></h2>
+    </div>
+    
     <div class="values-grid">
+      <!-- Value 1 -->
       <div class="value-card reveal">
-        <div class="value-icon">🌿</div>
-        <h3>Environmental Respect</h3>
-        <p>We prioritise sustainable practices, native plants, and water-wise designs that protect Australia's precious ecosystems.</p>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 12px;">Premium Quality</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">We never compromise on materials or technique. Every project is executed to the highest standard.</p>
       </div>
-      <div class="value-card reveal">
-        <div class="value-icon">⭐</div>
-        <h3>Excellence in Craft</h3>
-        <p>We hold ourselves to the highest standard in every job — from the smallest trim to a full landscape transformation.</p>
-      </div>
-      <div class="value-card reveal">
-        <div class="value-icon">🤝</div>
-        <h3>Honest Partnerships</h3>
-        <p>Transparent quotes, clear communication, and reliable service. No surprises — just trustworthy, professional work.</p>
-      </div>
-      <div class="value-card reveal">
-        <div class="value-icon">🇦🇺</div>
-        <h3>Community Pride</h3>
-        <p>We're local. We understand Australian gardens, lifestyles, and what it means to create a beautiful outdoor home.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Team Section -->
-<section class="section" id="our-team" style="background: var(--warm-white);">
-  <div class="container">
-    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 72px; align-items: center;">
-
-      <div class="reveal-left">
-        <span class="section-label">Our Team</span>
-        <h2 class="section-title">People Who<br /><em>Love What They Do</em></h2>
-        <p class="section-subtitle" style="max-width: 100%; margin-bottom: 24px;">
-          Our team is made up of qualified horticulturalists, landscape designers, and dedicated tradespeople who genuinely love working outdoors and helping clients create their dream garden.
-        </p>
-        <p class="section-subtitle" style="max-width: 100%; margin-bottom: 36px;">
-          Every member of our team undergoes continuous training and holds the relevant certifications for their area of expertise. When we arrive at your property, you can trust that you're getting the best people for the job.
-        </p>
-
-        <div style="display: flex; gap: 48px;">
-          <div>
-            <div style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--green-mid);" data-count="15" data-suffix="+">0+</div>
-            <div style="font-size: 0.82rem; color: var(--text-light); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;">Team Members</div>
-          </div>
-          <div>
-            <div style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--green-mid);" data-count="500" data-suffix="+">0+</div>
-            <div style="font-size: 0.82rem; color: var(--text-light); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;">Happy Clients</div>
-          </div>
-          <div>
-            <div style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--green-mid);" data-count="8">0</div>
-            <div style="font-size: 0.82rem; color: var(--text-light); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;">States Served</div>
-          </div>
-        </div>
+      
+      <!-- Value 2 -->
+      <div class="value-card reveal" style="transition-delay: 100ms;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 12px;">Reliability</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">We show up when we say we will, complete the job on schedule, and communicate transparently throughout.</p>
       </div>
 
-      <div class="reveal-right">
-        <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xl); height: 480px;">
-          <img src="/images/about_team.png" alt="TD Handy Man Australia team" style="width: 100%; height: 100%; object-fit: cover;" />
-        </div>
+      <!-- Value 3 -->
+      <div class="value-card reveal" style="transition-delay: 200ms;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 12px;">Fully Insured</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">Total peace of mind. We are fully licensed, insured, and compliant with all Australian building standards.</p>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-banner" id="about-cta">
-  <div class="container">
-    <div class="cta-content">
-      <div class="cta-text reveal-left">
-        <h2>Let's Work Together<br />on Your Garden</h2>
-        <p>Get in touch today and let's discuss how we can transform your outdoor space into something truly special.</p>
-      </div>
-      <div class="cta-actions reveal-right">
-        <a href="/contact" class="btn btn-white" id="about-cta-contact">Contact Us</a>
-        <a href="/gallery" class="btn btn-outline" id="about-cta-gallery" style="color: white; border-color: rgba(255,255,255,0.5);">View Our Work</a>
+      <!-- Value 4 -->
+      <div class="value-card reveal" style="transition-delay: 300ms;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 12px;">Expert Team</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">Our crew consists of experienced, respectful professionals who treat your property with the utmost care.</p>
       </div>
     </div>
   </div>
