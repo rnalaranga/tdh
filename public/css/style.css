@@ -1237,12 +1237,15 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   :root { --section-py: 80px; }
+  
+  html, body { overflow-x: hidden; width: 100%; }
+
   .nav-links {
     position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
     background: var(--bg-primary); flex-direction: column; justify-content: center;
     transition: var(--transition); z-index: 1000;
   }
-  .nav-links.active { right: 0; }
+  .nav-links.open { right: 0; }
   .hamburger { display: flex; }
   .hero-title-large { font-size: 3.5rem; }
   .hero-split-overlay { background: var(--overlay-dark); }
