@@ -210,22 +210,22 @@ h1, h2, h3, h4, h5, h6 {
   100% { transform: translate(-30px, 40px) scale(0.9); }
 }
 
-/* --- Buttons --- */
+/* --- Buttons (Architectural Style) --- */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   padding: 16px 36px;
-  border-radius: var(--radius-full);
+  border-radius: 0 20px 0 20px; /* Unique asymmetrical geometric shape */
   font-family: var(--font-body);
   font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   position: relative;
   overflow: hidden;
 }
@@ -1085,13 +1085,14 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--border-mid);
   color: var(--text-secondary);
   padding: 8px 24px;
-  border-radius: var(--radius-full);
+  border-radius: 0 15px 0 15px; /* Unique asymmetrical geometric shape */
   font-family: var(--font-body);
   font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .filter-btn.active, .filter-btn:hover {
   background: var(--text-primary);
