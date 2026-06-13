@@ -1276,7 +1276,7 @@ h1, h2, h3, h4, h5, h6 {
   
   /* Hero Section Aesthetics */
   .page-hero { 
-    padding-top: 75px !important; 
+    padding-top: 55px !important; 
     padding-bottom: 60px !important; 
     min-height: auto !important;
   }
