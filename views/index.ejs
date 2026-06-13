@@ -2,35 +2,35 @@
 
 <!-- ─── HERO SECTION ─────────────────────────────────────────────────────── -->
 <section class="page-hero" style="min-height: 100vh; height: auto; padding-top: 150px; padding-bottom: 100px; display: flex; align-items: center; text-align: left; position: relative;">
-  <div class="page-hero-bg" style="position: absolute; inset: 0; overflow: hidden; z-index: 0;">
+  <div class="page-hero-bg" style="position: absolute; inset: 0; overflow: hidden; z-index: 0; isolation: isolate; transform: translateZ(0); background-color: var(--bg-primary);">
     <!-- 1. Architectural Image -->
-    <img src="/images/hero_architecture.png" alt="Premium Property Maintenance Blueprint" style="filter: brightness(0.95) contrast(1.1); width: 100%; height: 100%; object-fit: cover; transition: var(--transition-slow);" />
+    <img src="/images/hero_architecture.png" alt="Premium Property Maintenance Blueprint" style="position: absolute; inset: 0; filter: brightness(0.95) contrast(1.1); width: 100%; height: 100%; object-fit: cover; transition: var(--transition-slow); z-index: -1;" />
     
     <!-- 2. Premium Adaptive Overlay (Dark/Light Mode) -->
-    <div style="position: absolute; inset: 0; background: var(--hero-bg-gradient-1); transition: var(--transition-slow);"></div>
-    <div style="position: absolute; inset: 0; background: var(--hero-bg-gradient-2); transition: var(--transition-slow);"></div>
+    <div style="position: absolute; inset: 0; background: var(--hero-bg-gradient-1); transition: var(--transition-slow); z-index: 1;"></div>
+    <div style="position: absolute; inset: 0; background: var(--hero-bg-gradient-2); transition: var(--transition-slow); z-index: 2;"></div>
     
     <!-- 3. Glowing Detail Orbs (Green & Blue) -->
-    <div class="glow-orb orb-teal" style="width: 800px; height: 800px; top: -10%; left: -10%; opacity: 0.3; filter: blur(120px); position: absolute; background: rgba(15,138,126,0.6);"></div>
-    <div class="glow-orb orb-blue" style="width: 600px; height: 600px; bottom: -20%; right: 0%; opacity: 0.2; filter: blur(120px); background: rgba(8,23,84,0.5); position: absolute;"></div>
+    <div class="glow-orb orb-teal" style="width: 800px; height: 800px; top: -10%; left: -10%; opacity: 0.3; filter: blur(120px); position: absolute; background: rgba(15,138,126,0.6); z-index: 3;"></div>
+    <div class="glow-orb orb-blue" style="width: 600px; height: 600px; bottom: -20%; right: 0%; opacity: 0.2; filter: blur(120px); background: rgba(8,23,84,0.5); position: absolute; z-index: 3;"></div>
 
     <!-- 4. Architectural Art / CAD Blueprint Elements -->
     <!-- Grid -->
-    <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(8,23,84,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(8,23,84,0.04) 1px, transparent 1px); background-size: 50px 50px; mix-blend-mode: multiply;"></div>
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(8,23,84,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(8,23,84,0.04) 1px, transparent 1px); background-size: 50px 50px; mix-blend-mode: multiply; z-index: 4;"></div>
     
     <!-- Crosshairs -->
-    <div style="position: absolute; top: 15%; left: 8%; color: var(--accent); font-weight: 300; font-family: monospace; font-size: 20px; opacity: 0.5;">+</div>
-    <div style="position: absolute; bottom: 25%; right: 12%; color: var(--accent); font-weight: 300; font-family: monospace; font-size: 20px; opacity: 0.5;">+</div>
-    <div style="position: absolute; top: 35%; right: 8%; color: var(--accent-hover); font-weight: 300; font-family: monospace; font-size: 20px; opacity: 0.5;">+</div>
-    <div style="position: absolute; bottom: 15%; left: 18%; color: var(--accent-hover); font-weight: 300; font-family: monospace; font-size: 20px; opacity: 0.5;">+</div>
+    <div style="position: absolute; top: 15%; left: 8%; color: var(--accent); font-weight: 300; font-family: monospace; font-size: 20px; opacity: 0.5; z-index: 4;">+</div>
+    <div style="position: absolute; bottom: 25%; right: 12%; color: var(--accent); font-weight: 300; font-family: monospace; font-size: 20px; opacity: 0.5; z-index: 4;">+</div>
+    <div style="position: absolute; top: 35%; right: 8%; color: var(--accent-hover); font-weight: 300; font-family: monospace; font-size: 20px; opacity: 0.5; z-index: 4;">+</div>
+    <div style="position: absolute; bottom: 15%; left: 18%; color: var(--accent-hover); font-weight: 300; font-family: monospace; font-size: 20px; opacity: 0.5; z-index: 4;">+</div>
     
     <!-- Measurement Scale Lines -->
-    <div style="position: absolute; top: 50%; right: 0; width: 80px; height: 1px; background: rgba(8,23,84,0.15);"></div>
-    <div style="position: absolute; top: 48%; right: 90px; font-family: monospace; font-size: 10px; color: rgba(8,23,84,0.35); transform: rotate(-90deg); transform-origin: right center; letter-spacing: 0.2em;">SCALE 1:100</div>
-    <div style="position: absolute; bottom: 0; left: 35%; width: 1px; height: 80px; background: rgba(8,23,84,0.15);"></div>
+    <div style="position: absolute; top: 50%; right: 0; width: 80px; height: 1px; background: rgba(8,23,84,0.15); z-index: 4;"></div>
+    <div style="position: absolute; top: 48%; right: 90px; font-family: monospace; font-size: 10px; color: rgba(8,23,84,0.35); transform: rotate(-90deg); transform-origin: right center; letter-spacing: 0.2em; z-index: 4;">SCALE 1:100</div>
+    <div style="position: absolute; bottom: 0; left: 35%; width: 1px; height: 80px; background: rgba(8,23,84,0.15); z-index: 4;"></div>
 
     <!-- Realistic Garden Grass Overlay (Tall & Grounded) -->
-    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50vh; min-height: 450px; background-image: url('/images/grass_overlay.png'); background-position: bottom center; background-repeat: repeat-x; background-size: auto 100%; mix-blend-mode: multiply; opacity: 0.85; z-index: 5; pointer-events: none; transition: var(--transition-slow); filter: contrast(1.1); transform: translateY(120px) scaleX(1.05); transform-origin: bottom center;"></div>
+    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50vh; min-height: 450px; background-image: url('/images/grass_overlay.png'); background-position: bottom center; background-repeat: repeat-x; background-size: auto 100%; mix-blend-mode: darken; opacity: 0.85; z-index: 5; pointer-events: none; transition: var(--transition-slow); filter: contrast(1.1); transform: translateY(120px) scaleX(1.05); transform-origin: bottom center;"></div>
     
     <!-- Animated Workers (Mower & Painter) -->
     <style>
@@ -44,10 +44,10 @@
         100% { transform: scaleX(-1) rotate(0deg); }
       }
     </style>
-    <div style="position: absolute; bottom: 10%; left: 0; width: 400px; height: 300px; background-image: url('/images/mower_realistic.png'); background-size: contain; background-position: bottom center; background-repeat: no-repeat; mix-blend-mode: multiply; opacity: 0.9; z-index: 6; pointer-events: none; animation: mow-grass 25s linear infinite; filter: contrast(1.1);"></div>
+    <div style="position: absolute; bottom: 10%; left: 0; width: 400px; height: 300px; background-image: url('/images/mower_realistic.png'); background-size: contain; background-position: bottom center; background-repeat: no-repeat; mix-blend-mode: darken; opacity: 0.9; z-index: 6; pointer-events: none; animation: mow-grass 25s linear infinite; filter: contrast(1.1); will-change: transform;"></div>
     
     <!-- Animated Painter Worker (Leaning to Paint) -->
-    <div style="position: absolute; bottom: 20%; right: -30px; width: 350px; height: 350px; background-image: url('/images/painter_realistic.png'); background-size: contain; background-position: bottom center; background-repeat: no-repeat; mix-blend-mode: multiply; opacity: 0.85; z-index: 6; pointer-events: none; animation: paint-edge 3s ease-in-out infinite; transform-origin: bottom center; filter: contrast(1.1);"></div>
+    <div style="position: absolute; bottom: 20%; right: -30px; width: 350px; height: 350px; background-image: url('/images/painter_realistic.png'); background-size: contain; background-position: bottom center; background-repeat: no-repeat; mix-blend-mode: darken; opacity: 0.85; z-index: 6; pointer-events: none; animation: paint-edge 3s ease-in-out infinite; transform-origin: bottom center; filter: contrast(1.1); will-change: transform;"></div>
   </div>
   
   <div class="container hero-content reveal" style="position: relative; z-index: 2; width: 100%;">

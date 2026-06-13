@@ -22,8 +22,8 @@
   <script>
     (function() {
       const savedTheme = localStorage.getItem('theme');
-      // Respect system preference if no saved theme
-      let activeTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      // Default to light theme for all new visitors
+      let activeTheme = 'light';
       if (savedTheme) {
         activeTheme = savedTheme;
       }
