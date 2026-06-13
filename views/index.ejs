@@ -39,14 +39,15 @@
         100% { transform: translateX(110vw); }
       }
       @keyframes paint-edge {
-        0% { transform: translateY(0) scaleX(-1); }
-        50% { transform: translateY(-120px) scaleX(-1); }
-        100% { transform: translateY(0) scaleX(-1); }
+        0% { transform: scaleX(-1) rotate(0deg); }
+        50% { transform: scaleX(-1) rotate(-6deg); }
+        100% { transform: scaleX(-1) rotate(0deg); }
       }
     </style>
     <div style="position: absolute; bottom: 10%; left: 0; width: 400px; height: 300px; background-image: url('/images/mower_realistic.png'); background-size: contain; background-position: bottom center; background-repeat: no-repeat; mix-blend-mode: multiply; opacity: 0.9; z-index: 6; pointer-events: none; animation: mow-grass 25s linear infinite; filter: contrast(1.1);"></div>
     
-    <div style="position: absolute; bottom: 20%; right: -30px; width: 350px; height: 350px; background-image: url('/images/painter_realistic.png'); background-size: contain; background-position: bottom center; background-repeat: no-repeat; mix-blend-mode: multiply; opacity: 0.85; z-index: 6; pointer-events: none; animation: paint-edge 5s ease-in-out infinite; filter: contrast(1.1);"></div>
+    <!-- Animated Painter Worker (Leaning to Paint) -->
+    <div style="position: absolute; bottom: 20%; right: -30px; width: 350px; height: 350px; background-image: url('/images/painter_realistic.png'); background-size: contain; background-position: bottom center; background-repeat: no-repeat; mix-blend-mode: multiply; opacity: 0.85; z-index: 6; pointer-events: none; animation: paint-edge 3s ease-in-out infinite; transform-origin: bottom center; filter: contrast(1.1);"></div>
   </div>
   
   <div class="container hero-content reveal" style="position: relative; z-index: 2; width: 100%;">
