@@ -43,21 +43,22 @@
     <!-- Logo -->
     <a href="/" class="nav-logo" id="nav-logo" style="display: flex; align-items: center; gap: 15px; text-decoration: none;">
       <img src="/images/logo.png" alt="TD Handyman Logo" style="height: 50px; width: auto; display: block;" />
-      <div style="display: flex; flex-direction: column; justify-content: center;">
+      <div class="mobile-hide-logo-text" style="display: flex; flex-direction: column; justify-content: center;">
         <span style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--accent); letter-spacing: 0.05em; line-height: 1.1;">TD HANDYMAN</span>
       </div>
     </a>
 
-    <!-- Nav Links & Actions -->
-    <div style="display: flex; align-items: center; gap: 30px;">
-      <ul class="nav-links" id="nav-links">
-        <li><a href="/" class="nav-link <%= page === 'home' ? 'active' : '' %>" id="nav-home">Home</a></li>
-        <li><a href="/services" class="nav-link <%= page === 'services' ? 'active' : '' %>" id="nav-services">Services</a></li>
-        <li><a href="/gallery" class="nav-link <%= page === 'gallery' ? 'active' : '' %>" id="nav-gallery">Gallery</a></li>
-        <li><a href="/about" class="nav-link <%= page === 'about' ? 'active' : '' %>" id="nav-about">About</a></li>
-        <li><a href="/contact" class="nav-link nav-cta <%= page === 'contact' ? 'active' : '' %>" id="nav-contact">Get a Quote</a></li>
-      </ul>
+    <!-- Nav Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/" class="nav-link <%= page === 'home' ? 'active' : '' %>" id="nav-home">Home</a></li>
+      <li><a href="/services" class="nav-link <%= page === 'services' ? 'active' : '' %>" id="nav-services">Services</a></li>
+      <li><a href="/gallery" class="nav-link <%= page === 'gallery' ? 'active' : '' %>" id="nav-gallery">Gallery</a></li>
+      <li><a href="/about" class="nav-link <%= page === 'about' ? 'active' : '' %>" id="nav-about">About</a></li>
+      <li><a href="/contact" class="nav-link nav-cta <%= page === 'contact' ? 'active' : '' %>" id="nav-contact">Get a Quote</a></li>
+    </ul>
 
+    <!-- Actions: Theme & Hamburger -->
+    <div style="display: flex; align-items: center; gap: 20px;">
       <!-- Theme Toggle -->
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
         <!-- Sun icon (shown in dark theme) -->
@@ -65,11 +66,11 @@
         <!-- Moon icon (shown in light theme) -->
         <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
-    </div>
 
-    <!-- Hamburger -->
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>

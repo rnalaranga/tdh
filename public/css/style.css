@@ -1264,6 +1264,9 @@ h1, h2, h3, h4, h5, h6 {
   
   /* Hamburger Color */
   .hamburger span { background: #fff; }
+  
+  /* Hide logo text on mobile to prevent overflow */
+  .mobile-hide-logo-text { display: none !important; }
 }
 
 [data-theme="light"] .navbar.scrolled .hamburger span {
