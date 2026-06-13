@@ -3,15 +3,43 @@
 <!-- ─── HERO SECTION ─────────────────────────────────────────────────────── -->
 <section class="page-hero" style="min-height: 100vh; height: auto; padding-top: 150px; padding-bottom: 100px; display: flex; align-items: center; text-align: left; position: relative;">
   <div class="page-hero-bg" style="position: absolute; inset: 0; overflow: hidden; z-index: 0;">
-    <img src="/images/hero_handyman.png" alt="Premium Property Maintenance" style="filter: brightness(0.7) contrast(1.1); width: 100%; height: 100%; object-fit: cover;" />
+    <!-- 1. Architectural Image -->
+    <img src="/images/hero_architecture.png" alt="Premium Property Maintenance Blueprint" style="filter: brightness(0.95) contrast(1.1); width: 100%; height: 100%; object-fit: cover; transition: var(--transition-slow);" />
     
-    <!-- Modern Deep Mesh Gradient Overlay -->
-    <div style="position: absolute; inset: 0; background: radial-gradient(circle at 40% 50%, rgba(3,10,13,0.4) 0%, rgba(3,10,13,0.8) 100%);"></div>
-    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(8,23,84,0.3) 0%, rgba(15,138,126,0.1) 100%); mix-blend-mode: overlay;"></div>
+    <!-- 2. Premium Adaptive Overlay (Dark/Light Mode) -->
+    <div style="position: absolute; inset: 0; background: var(--hero-bg-gradient-1); transition: var(--transition-slow);"></div>
+    <div style="position: absolute; inset: 0; background: var(--hero-bg-gradient-2); transition: var(--transition-slow);"></div>
     
-    <!-- Subtle Animated Orbs -->
-    <div class="glow-orb orb-teal" style="width: 800px; height: 800px; top: -10%; left: -10%; opacity: 0.3; filter: blur(120px); position: absolute; background: rgba(15,138,126,0.5);"></div>
-    <div class="glow-orb orb-blue" style="width: 600px; height: 600px; bottom: -20%; right: 0%; opacity: 0.2; filter: blur(120px); background: rgba(8,23,84,0.6); position: absolute;"></div>
+    <!-- 3. Glowing Detail Orbs (Green & Blue) -->
+    <div class="glow-orb orb-teal" style="width: 800px; height: 800px; top: -10%; left: -10%; opacity: 0.3; filter: blur(120px); position: absolute; background: rgba(15,138,126,0.6);"></div>
+    <div class="glow-orb orb-blue" style="width: 600px; height: 600px; bottom: -20%; right: 0%; opacity: 0.2; filter: blur(120px); background: rgba(8,23,84,0.5); position: absolute;"></div>
+
+    <!-- 4. Architectural Art / CAD Blueprint Elements -->
+    <!-- Grid -->
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(8,23,84,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(8,23,84,0.04) 1px, transparent 1px); background-size: 50px 50px; mix-blend-mode: multiply;"></div>
+    
+    <!-- Crosshairs -->
+    <div style="position: absolute; top: 15%; left: 8%; color: var(--accent); font-weight: 300; font-family: monospace; font-size: 20px; opacity: 0.5;">+</div>
+    <div style="position: absolute; bottom: 25%; right: 12%; color: var(--accent); font-weight: 300; font-family: monospace; font-size: 20px; opacity: 0.5;">+</div>
+    <div style="position: absolute; top: 35%; right: 8%; color: var(--accent-hover); font-weight: 300; font-family: monospace; font-size: 20px; opacity: 0.5;">+</div>
+    <div style="position: absolute; bottom: 15%; left: 18%; color: var(--accent-hover); font-weight: 300; font-family: monospace; font-size: 20px; opacity: 0.5;">+</div>
+    
+    <!-- Measurement Scale Lines -->
+    <div style="position: absolute; top: 50%; right: 0; width: 80px; height: 1px; background: rgba(8,23,84,0.15);"></div>
+    <div style="position: absolute; top: 48%; right: 90px; font-family: monospace; font-size: 10px; color: rgba(8,23,84,0.35); transform: rotate(-90deg); transform-origin: right center; letter-spacing: 0.2em;">SCALE 1:100</div>
+    <div style="position: absolute; bottom: 0; left: 35%; width: 1px; height: 80px; background: rgba(8,23,84,0.15);"></div>
+
+    <!-- Realistic Garden Grass Overlay (Tall & Grounded) -->
+    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50vh; min-height: 450px; background-image: url('/images/grass_overlay.png'); background-position: bottom center; background-repeat: repeat-x; background-size: auto 100%; mix-blend-mode: multiply; opacity: 0.85; z-index: 5; pointer-events: none; transition: var(--transition-slow); filter: contrast(1.1); transform: translateY(120px) scaleX(1.05); transform-origin: bottom center;"></div>
+    
+    <!-- Animated Mower Worker (Realistic & Large) -->
+    <style>
+      @keyframes mow-grass {
+        0% { transform: translateX(-450px); }
+        100% { transform: translateX(110vw); }
+      }
+    </style>
+    <div style="position: absolute; bottom: 10%; left: 0; width: 400px; height: 300px; background-image: url('/images/mower_realistic.png'); background-size: contain; background-position: bottom center; background-repeat: no-repeat; mix-blend-mode: multiply; opacity: 0.9; z-index: 6; pointer-events: none; animation: mow-grass 25s linear infinite; filter: contrast(1.1);"></div>
   </div>
   
   <div class="container hero-content reveal" style="position: relative; z-index: 2; width: 100%;">
@@ -20,49 +48,52 @@
       
       <!-- Left Side: Main Typography & Actions -->
       <div style="flex: 1 1 500px; max-width: 700px;">
-        <!-- Modern Dark Glass Floating Badge -->
-        <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(3,10,13,0.4); backdrop-filter: blur(20px); padding: 8px 20px; border-radius: 0 15px 0 15px; border: 1px solid rgba(255,255,255,0.1); border-top: 1px solid rgba(255,255,255,0.2); margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-          <span style="display: flex; width: 10px; height: 10px; background: #00FFC2; border-radius: 50%; animation: pulseAccent 2s infinite; box-shadow: 0 0 10px #00FFC2;"></span>
-          <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #E0E7FF;">Melbourne's Premium Choice</span>
+        <!-- Premium Adaptive Glass Floating Badge -->
+        <div style="display: inline-flex; align-items: center; gap: 10px; background: var(--glass-card-bg); backdrop-filter: blur(20px); padding: 8px 20px; border-radius: 0 15px 0 15px; border: 1px solid var(--glass-card-border); border-top: 1px solid var(--glass-card-highlight); margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: var(--transition-slow);">
+          <span style="display: flex; width: 10px; height: 10px; background: var(--accent); border-radius: 50%; animation: pulseAccent 2s infinite; box-shadow: 0 0 10px var(--accent);"></span>
+          <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent);">Melbourne's Premium Choice</span>
         </div>
 
-        <h1 class="hero-title-large" style="margin-bottom: 20px; text-shadow: 0 10px 40px rgba(0,0,0,0.8); font-size: clamp(3rem, 5vw, 5rem); line-height: 1.05;">
-          <span style="color: #fff;">Crafting </span><em style="background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Exceptional</em><br>
-          <span style="color: #fff;">Spaces</span>
+        <h1 class="hero-title-large" style="margin-bottom: 20px; font-size: clamp(3rem, 5vw, 5rem); line-height: 1.05; word-break: keep-all;">
+          <!-- Premium Adaptive Gradient Text (All on one line) -->
+          <span style="background: var(--hero-text-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; transition: var(--transition-slow);">Crafting Exceptional Spaces</span>
         </h1>
         
-        <p class="hero-desc" style="font-size: 1.2rem; margin-bottom: 40px; color: rgba(255,255,255,0.85); max-width: 550px; line-height: 1.6; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+        <p class="hero-desc" style="font-size: 1.2rem; margin-bottom: 40px; color: var(--text-secondary); max-width: 550px; line-height: 1.6; font-weight: 500;">
           We bring an architect's eye and a master craftsman's touch to property maintenance across South East Melbourne.
         </p>
         
         <div class="hero-actions" style="display: flex; gap: 20px; flex-wrap: wrap;">
-          <a href="/services" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(8,23,84,0.4); background: linear-gradient(135deg, var(--accent), #1E56A0); border: none;">Explore Services</a>
-          <a href="/contact" class="btn btn-outline" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 16px 36px; font-size: 1.1rem; color: #fff; border-color: rgba(255,255,255,0.2);">Request Quote</a>
+          <!-- Primary Adaptive Transparent Glass Button -->
+          <a href="/services" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.1rem; background: var(--glass-card-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-card-border); border-top: 1px solid var(--glass-card-highlight); color: var(--text-primary); box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: var(--transition-slow);">Explore Services</a>
+          
+          <!-- Secondary Adaptive Transparent Glass Button -->
+          <a href="/contact" class="btn btn-outline" style="padding: 16px 36px; font-size: 1.1rem; background: transparent; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-card-border); border-top: 1px solid var(--glass-card-highlight); color: var(--text-primary); box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: var(--transition-slow);">Request Quote</a>
         </div>
       </div>
 
-      <!-- Right Side: Ultra-Modern Dark Glass Trust Cards -->
+      <!-- Right Side: Ultra-Modern Light Glass Trust Cards -->
       <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 24px;">
         
-        <!-- Trust Card 1 -->
-        <div style="background: rgba(10, 15, 25, 0.4); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); border: 1px solid rgba(255,255,255,0.08); border-top: 1px solid rgba(255,255,255,0.2); padding: 30px; border-radius: 0; clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px); display: flex; align-items: center; gap: 20px; transform: translateX(min(0px, -2vw)); box-shadow: 0 30px 60px rgba(0,0,0,0.6);">
-          <div style="width: 60px; height: 60px; border-radius: 0 15px 0 15px; background: linear-gradient(135deg, #1E56A0, var(--accent)); display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 10px 20px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); flex-shrink: 0;">
+        <!-- Trust Card 1 (Adaptive Glass) -->
+        <div style="background: var(--glass-card-bg); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); border: 1px solid var(--glass-card-border); border-top: 1px solid var(--glass-card-highlight); padding: 30px; border-radius: 0; clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px); display: flex; align-items: center; gap: 20px; transform: translateX(min(0px, -2vw)); box-shadow: 0 30px 60px rgba(0,0,0,0.1);">
+          <div style="width: 60px; height: 60px; border-radius: 0 15px 0 15px; background: linear-gradient(135deg, #1E56A0, var(--accent)); display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 10px 20px rgba(8,23,84,0.2); border: 1px solid var(--glass-card-highlight); flex-shrink: 0;">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </div>
           <div>
-            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 1.8rem; color: #fff; line-height: 1;">10+ Years</div>
-            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px;">Master Experience</div>
+            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 1.8rem; color: var(--text-primary); line-height: 1;">10+ Years</div>
+            <div style="font-size: 0.85rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; font-weight: 600;">Master Experience</div>
           </div>
         </div>
         
-        <!-- Trust Card 2 -->
-        <div style="background: rgba(10, 15, 25, 0.2); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); border: 1px solid rgba(255,255,255,0.08); border-top: 1px solid rgba(255,255,255,0.2); padding: 30px; border-radius: 0; clip-path: polygon(0 30px, 30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%); display: flex; align-items: center; gap: 20px; transform: translateX(max(0px, 2vw)); box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
-          <div style="width: 60px; height: 60px; border-radius: 0 15px 0 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #a5b4fc; flex-shrink: 0;">
+        <!-- Trust Card 2 (Adaptive Glass) -->
+        <div style="background: var(--glass-card-bg); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); border: 1px solid var(--glass-card-border); border-top: 1px solid var(--glass-card-highlight); padding: 30px; border-radius: 0; clip-path: polygon(0 30px, 30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%); display: flex; align-items: center; gap: 20px; transform: translateX(max(0px, 2vw)); box-shadow: 0 30px 60px rgba(0,0,0,0.1);">
+          <div style="width: 60px; height: 60px; border-radius: 0 15px 0 15px; background: var(--bg-primary); border: 1px solid var(--glass-card-border); display: flex; align-items: center; justify-content: center; color: var(--accent-hover); flex-shrink: 0;">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
           <div>
-            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 1.8rem; color: #fff; line-height: 1;">5-Star Rated</div>
-            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px;">Client Satisfaction</div>
+            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 1.8rem; color: var(--text-primary); line-height: 1;">5-Star Rated</div>
+            <div style="font-size: 0.85rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; font-weight: 600;">Client Satisfaction</div>
           </div>
         </div>
 

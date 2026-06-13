@@ -25,6 +25,14 @@
   --overlay-gradient: linear-gradient(to top, rgba(3,10,13,0.95) 0%, rgba(3,10,13,0.4) 50%, rgba(3,10,13,0.1) 100%);
   --hero-overlay-start: rgba(3, 10, 13, 0.95);
   --hero-overlay-end: rgba(3, 10, 13, 0.4);
+  
+  --glass-card-bg: rgba(10, 15, 25, 0.4);
+  --glass-card-border: rgba(255, 255, 255, 0.08);
+  --glass-card-highlight: rgba(255, 255, 255, 0.2);
+  --hero-text-gradient: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+  
+  --hero-bg-gradient-1: linear-gradient(135deg, rgba(3,10,13,0.98) 0%, rgba(3,10,13,0.9) 40%, rgba(15,138,126,0.3) 70%, rgba(8,23,84,0.6) 100%);
+  --hero-bg-gradient-2: radial-gradient(circle at 0% 50%, rgba(3,10,13,0.98) 0%, transparent 80%);
 
   /* Typography */
   --font-heading:    'Cormorant Garamond', Georgia, serif;
@@ -68,6 +76,14 @@
   --overlay-gradient: linear-gradient(to top, rgba(245,249,250,0.95) 0%, rgba(245,249,250,0.4) 50%, rgba(245,249,250,0.1) 100%);
   --hero-overlay-start: rgba(245, 249, 250, 0.95);
   --hero-overlay-end: rgba(245, 249, 250, 0.4);
+
+  --glass-card-bg: rgba(255, 255, 255, 0.65);
+  --glass-card-border: rgba(8, 23, 84, 0.05);
+  --glass-card-highlight: rgba(255, 255, 255, 0.8);
+  --hero-text-gradient: linear-gradient(135deg, #081754 0%, #1E56A0 40%, #0F8A7E 100%);
+  
+  --hero-bg-gradient-1: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(245,249,250,0.85) 40%, rgba(15,138,126,0.15) 70%, rgba(8,23,84,0.2) 100%);
+  --hero-bg-gradient-2: radial-gradient(circle at 0% 50%, rgba(255,255,255,0.95) 0%, transparent 80%);
 }
 
 /* --- Reset & Base --- */
