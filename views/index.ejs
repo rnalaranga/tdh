@@ -1,65 +1,74 @@
 <%- include('partials/header', { page: 'home', title: title, description: description }) %>
 
 <!-- ─── HERO SECTION ─────────────────────────────────────────────────────── -->
-<section class="page-hero" style="min-height: 100vh; height: auto; padding-top: 150px; padding-bottom: 100px; display: flex; align-items: center; text-align: left; overflow-x: hidden;">
-  <div class="page-hero-bg">
-    <img src="/images/hero_handyman.png" alt="Premium Property Maintenance" style="filter: brightness(0.8) contrast(1.2);" />
+<section class="page-hero" style="min-height: 100vh; height: auto; padding-top: 150px; padding-bottom: 100px; display: flex; align-items: center; text-align: left; position: relative;">
+  <div class="page-hero-bg" style="position: absolute; inset: 0; overflow: hidden; z-index: 0;">
+    <img src="/images/hero_handyman.png" alt="Premium Property Maintenance" style="filter: brightness(0.8) contrast(1.2); width: 100%; height: 100%; object-fit: cover;" />
     
     <!-- Green Blue Mix Aesthetic -->
     <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,138,126,0.5) 0%, rgba(30,86,160,0.4) 100%); mix-blend-mode: overlay;"></div>
     
     <!-- Readability Gradient -->
     <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(3,10,13,0.98) 0%, rgba(3,10,13,0.7) 40%, rgba(15,138,126,0.2) 100%);"></div>
+    
+    <!-- Glowing Detail Orbs -->
+    <div class="glow-orb orb-teal" style="width: 800px; height: 800px; top: -20%; left: -20%; opacity: 0.6; filter: blur(100px); position: absolute;"></div>
+    <div class="glow-orb orb-blue" style="width: 600px; height: 600px; bottom: -10%; right: 10%; opacity: 0.4; filter: blur(100px); background: #1E56A0; position: absolute;"></div>
   </div>
   
-  <!-- Glowing Detail Orbs -->
-  <div class="glow-orb orb-teal" style="width: 800px; height: 800px; top: -20%; left: -20%; opacity: 0.6; filter: blur(100px);"></div>
-  <div class="glow-orb orb-blue" style="width: 600px; height: 600px; bottom: -10%; right: 10%; opacity: 0.4; filter: blur(100px); background: #1E56A0;"></div>
-  
-  <div class="container hero-content reveal" style="position: relative; z-index: 2;">
-    <div style="max-width: 800px;">
-      <!-- Floating Badge -->
-      <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); padding: 8px 20px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-        <span style="display: flex; width: 10px; height: 10px; background: var(--accent); border-radius: 50%; animation: pulseAccent 2s infinite; box-shadow: 0 0 10px var(--accent);"></span>
-        <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #fff;">Melbourne's Premium Choice</span>
+  <div class="container hero-content reveal" style="position: relative; z-index: 2; width: 100%;">
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 60px; align-items: center; justify-content: space-between;">
+      
+      <!-- Left Side: Main Typography & Actions -->
+      <div style="flex: 1 1 500px; max-width: 700px;">
+        <!-- Floating Badge -->
+        <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); padding: 8px 20px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+          <span style="display: flex; width: 10px; height: 10px; background: var(--accent); border-radius: 50%; animation: pulseAccent 2s infinite; box-shadow: 0 0 10px var(--accent);"></span>
+          <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #fff;">Melbourne's Premium Choice</span>
+        </div>
+
+        <h1 class="hero-title-large" style="margin-bottom: 20px; text-shadow: 0 10px 30px rgba(0,0,0,0.5); font-size: clamp(3rem, 5vw, 5rem); line-height: 1.05;">
+          <span style="color: #fff;">Crafting</span><br>
+          <em style="background: linear-gradient(135deg, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Exceptional</em><br>
+          <span style="color: #fff;">Spaces</span>
+        </h1>
+        
+        <p class="hero-desc" style="font-size: 1.2rem; margin-bottom: 40px; color: rgba(255,255,255,0.8); max-width: 550px; line-height: 1.6;">
+          We bring an architect's eye and a master craftsman's touch to property maintenance across South East Melbourne.
+        </p>
+        
+        <div class="hero-actions" style="display: flex; gap: 20px; flex-wrap: wrap;">
+          <a href="/services" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(15,138,126,0.3);">Explore Services</a>
+          <a href="/contact" class="btn btn-outline" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 16px 36px; font-size: 1.1rem; color: #fff; border-color: rgba(255,255,255,0.2);">Request Quote</a>
+        </div>
       </div>
 
-      <h1 class="hero-title-large" style="margin-bottom: 24px; text-shadow: 0 10px 30px rgba(0,0,0,0.5); font-size: clamp(3.5rem, 6vw, 5.5rem); line-height: 1.1;">
-        <span style="color: #fff;">Crafting</span><br>
-        <em style="background: linear-gradient(135deg, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Exceptional</em><br>
-        <span style="color: #fff;">Spaces</span>
-      </h1>
-      
-      <p class="hero-desc" style="font-size: 1.3rem; margin-bottom: 40px; color: rgba(255,255,255,0.8); max-width: 600px; line-height: 1.6;">
-        We bring an architect's eye and a master craftsman's touch to property maintenance across South East Melbourne.
-      </p>
-      
-      <div class="hero-actions" style="margin-bottom: 60px; display: flex; gap: 20px;">
-        <a href="/services" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(15,138,126,0.3);">Explore Services</a>
-        <a href="/contact" class="btn btn-outline" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 16px 36px; font-size: 1.1rem; color: #fff; border-color: rgba(255,255,255,0.2);">Request Quote</a>
-      </div>
-
-      <!-- Quick Trust Indicators -->
-      <div style="display: flex; gap: 40px; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-          <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 5px 15px rgba(15,138,126,0.4);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <!-- Right Side: Floating Trust Indicator Cards -->
+      <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 24px;">
+        
+        <!-- Trust Card 1 -->
+        <div style="background: rgba(3, 10, 13, 0.4); backdrop-filter: blur(25px); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: var(--radius-lg); display: flex; align-items: center; gap: 20px; transform: translateX(min(0px, -2vw)); box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-hover)); display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 5px 20px rgba(15,138,126,0.5); flex-shrink: 0;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </div>
           <div>
-            <div style="font-weight: 600; font-size: 1rem; color: #fff;">10+ Years</div>
-            <div style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em;">Experience</div>
+            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 1.8rem; color: #fff; line-height: 1;">10+ Years</div>
+            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px;">Master Experience</div>
           </div>
         </div>
         
-        <div style="display: flex; align-items: center; gap: 15px;">
-          <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: var(--accent);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <!-- Trust Card 2 -->
+        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(25px); border: 1px solid rgba(255,255,255,0.15); padding: 30px; border-radius: var(--radius-lg); display: flex; align-items: center; gap: 20px; transform: translateX(max(0px, 2vw)); box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
           <div>
-            <div style="font-weight: 600; font-size: 1rem; color: #fff;">5-Star Rated</div>
-            <div style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em;">Service</div>
+            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 1.8rem; color: #fff; line-height: 1;">5-Star Rated</div>
+            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px;">Client Satisfaction</div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
