@@ -1,31 +1,81 @@
 <%- include('partials/header', { page: 'home', title: title, description: description }) %>
 
 <!-- ─── HERO SECTION ─────────────────────────────────────────────────────── -->
-<section class="hero-split" id="hero-section">
-  <div class="hero-split-bg">
-    <img src="/images/hero_handyman.png" alt="Premium Property Maintenance" />
+<section class="page-hero" style="min-height: 100vh; height: auto; padding-top: 150px; padding-bottom: 100px; display: flex; align-items: center; text-align: left; overflow-x: hidden;">
+  <div class="page-hero-bg">
+    <img src="/images/hero_handyman.png" alt="Premium Property Maintenance" style="filter: brightness(0.8) contrast(1.2);" />
+    
+    <!-- Green Blue Mix Aesthetic -->
+    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,138,126,0.5) 0%, rgba(30,86,160,0.4) 100%); mix-blend-mode: overlay;"></div>
+    
+    <!-- Readability Gradient -->
+    <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(3,10,13,0.98) 0%, rgba(3,10,13,0.7) 40%, rgba(15,138,126,0.2) 100%);"></div>
   </div>
-  <div class="hero-split-overlay"></div>
   
-  <div class="container hero-content reveal">
-    <span class="eyebrow">Premium Property Maintenance</span>
-    <h1 class="hero-title-large">
-      <span>Crafting</span>
-      <em>Exceptional</em>
-      <span>Spaces</span>
-    </h1>
-    <p class="hero-desc">
-      We bring an architect's eye and a master craftsman's touch to property maintenance across South East Melbourne.
-    </p>
-    <div class="hero-actions">
-      <a href="/portfolio" class="btn btn-primary">View Our Work</a>
-      <a href="/contact" class="btn btn-outline">Request a Quote</a>
+  <!-- Glowing Detail Orbs -->
+  <div class="glow-orb orb-teal" style="width: 800px; height: 800px; top: -20%; left: -20%; opacity: 0.6; filter: blur(100px);"></div>
+  <div class="glow-orb orb-blue" style="width: 600px; height: 600px; bottom: -10%; right: 10%; opacity: 0.4; filter: blur(100px); background: #1E56A0;"></div>
+  
+  <div class="container hero-content reveal" style="position: relative; z-index: 2;">
+    <div style="max-width: 800px;">
+      <!-- Floating Badge -->
+      <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); padding: 8px 20px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+        <span style="display: flex; width: 10px; height: 10px; background: var(--accent); border-radius: 50%; animation: pulseAccent 2s infinite; box-shadow: 0 0 10px var(--accent);"></span>
+        <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #fff;">Melbourne's Premium Choice</span>
+      </div>
+
+      <h1 class="hero-title-large" style="margin-bottom: 24px; text-shadow: 0 10px 30px rgba(0,0,0,0.5); font-size: clamp(3.5rem, 6vw, 5.5rem); line-height: 1.1;">
+        <span style="color: #fff;">Crafting</span><br>
+        <em style="background: linear-gradient(135deg, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Exceptional</em><br>
+        <span style="color: #fff;">Spaces</span>
+      </h1>
+      
+      <p class="hero-desc" style="font-size: 1.3rem; margin-bottom: 40px; color: rgba(255,255,255,0.8); max-width: 600px; line-height: 1.6;">
+        We bring an architect's eye and a master craftsman's touch to property maintenance across South East Melbourne.
+      </p>
+      
+      <div class="hero-actions" style="margin-bottom: 60px; display: flex; gap: 20px;">
+        <a href="/services" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(15,138,126,0.3);">Explore Services</a>
+        <a href="/contact" class="btn btn-outline" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 16px 36px; font-size: 1.1rem; color: #fff; border-color: rgba(255,255,255,0.2);">Request Quote</a>
+      </div>
+
+      <!-- Quick Trust Indicators -->
+      <div style="display: flex; gap: 40px; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
+        <div style="display: flex; align-items: center; gap: 15px;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 5px 15px rgba(15,138,126,0.4);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div>
+            <div style="font-weight: 600; font-size: 1rem; color: #fff;">10+ Years</div>
+            <div style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em;">Experience</div>
+          </div>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: 15px;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: var(--accent);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <div style="font-weight: 600; font-size: 1rem; color: #fff;">5-Star Rated</div>
+            <div style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em;">Service</div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  
+  <div style="position: absolute; right: 40px; bottom: 40px; display: flex; flex-direction: column; align-items: center; gap: 10px; z-index: 2;">
+    <span style="writing-mode: vertical-rl; font-family: var(--font-body); font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Scroll</span>
+    <div style="width: 1px; height: 60px; background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);"></div>
   </div>
 </section>
 
 <!-- ─── PHILOSOPHY / INTRO ───────────────────────────────────────────────── -->
 <section class="section features-luxury" id="intro-section">
+  <!-- Glowing Orbs -->
+  <div class="glow-orb orb-teal" style="width: 400px; height: 400px; top: 0; left: -100px;"></div>
+  <div class="glow-orb orb-blue" style="width: 300px; height: 300px; bottom: -50px; right: -50px; animation-delay: -5s;"></div>
+
   <div class="container">
     <div class="luxury-grid">
       <div class="luxury-text reveal">
@@ -45,52 +95,137 @@
   </div>
 </section>
 
-<!-- ─── SERVICES MASONRY ─────────────────────────────────────────────────── -->
-<section class="section services-masonry" id="services-section">
+<!-- ─── WHAT WE DO ───────────────────────────────────────────────────────── -->
+<section class="section" id="what-we-do" style="background: var(--bg-secondary); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
   <div class="container">
-    <div class="reveal">
+    <div class="text-center reveal" style="margin-bottom: 60px;">
       <span class="eyebrow">Our Expertise</span>
-      <h2 class="section-title">Mastery in <em>Every Trade</em></h2>
+      <h2 class="section-title">What We <em>Do</em></h2>
+      <p class="section-subtitle" style="margin: 0 auto;">Comprehensive property maintenance and enhancement solutions, delivered with meticulous attention to detail.</p>
     </div>
-    
-    <div class="masonry-grid">
-      <a href="/services#landscaping" class="masonry-item reveal">
-        <img src="/images/service_landscaping.png" alt="Landscaping" class="masonry-img">
-        <div class="masonry-overlay">
-          <span class="masonry-tag">01 / Outdoor</span>
-          <h3 class="masonry-title">Landscaping</h3>
-        </div>
-      </a>
+
+    <div class="services-grid-8">
+      <% const allServices = [
+        { name: 'Landscaping', desc: 'Custom garden designs, planting, and complete outdoor transformations.', img: '/images/service_landscaping_action.png', icon: 'M12 2L2 22h20L12 2z' },
+        { name: 'Retaining Walls', desc: 'Structurally sound and aesthetically pleasing walls for any terrain.', img: '/images/service_retaining_walls_action.png', icon: 'M4 4h16v16H4z' },
+        { name: 'Rendering', desc: 'Premium exterior and interior cement or acrylic rendering finishes.', img: '/images/service_rendering_action.png', icon: 'M3 12h18M3 6h18M3 18h18' },
+        { name: 'Tiling', desc: 'Precision wall and floor tiling for bathrooms, kitchens, and outdoor spaces.', img: '/images/service_tiling_action.png', icon: 'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z' },
+        { name: 'General Maintenance', desc: 'Reliable, ongoing property upkeep and routine repair services.', img: '/images/service_maintenance_action.png', icon: 'M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 9.36l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 9.36-7.94l-3.77 3.77a1 1 0 0 0 0 1.41z' },
+        { name: 'Painting', desc: 'Flawless interior and exterior painting with premium quality paints.', img: '/images/service_painting_action.png', icon: 'M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z' },
+        { name: 'Irrigation Systems', desc: 'Automated watering solutions to keep your landscapes lush and green.', img: '/images/service_irrigation_action.png', icon: 'M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z' },
+        { name: 'Modern Wall Moulding', desc: 'Elegant architectural wainscoting and modern wall paneling.', img: '/images/service_moulding_action.png', icon: 'M4 4h16v16H4z M8 8h8v8H8z' }
+      ] %>
       
-      <a href="/services#retaining-walls" class="masonry-item reveal" style="transition-delay: 150ms;">
-        <img src="/images/service_retaining_walls.png" alt="Retaining Walls" class="masonry-img">
-        <div class="masonry-overlay">
-          <span class="masonry-tag">02 / Structural</span>
-          <h3 class="masonry-title">Retaining Walls</h3>
+      <% allServices.forEach((s, i) => { %>
+        <div class="service-image-card reveal" style="transition-delay: <%= i * 50 %>ms;">
+          <div class="sic-bg">
+            <img src="<%= s.img %>" alt="<%= s.name %>" loading="lazy">
+          </div>
+          <div class="sic-content">
+            <div class="sic-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="<%= s.icon %>" />
+              </svg>
+            </div>
+            <h3 class="sic-title"><%= s.name %></h3>
+            <p class="sic-desc"><%= s.desc %></p>
+            <a href="/services" class="sic-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
         </div>
-      </a>
-      
-      <a href="/services#rendering" class="masonry-item reveal" style="transition-delay: 300ms;">
-        <img src="/images/service_rendering.png" alt="Rendering" class="masonry-img">
-        <div class="masonry-overlay">
-          <span class="masonry-tag">03 / Finishing</span>
-          <h3 class="masonry-title">Rendering & Painting</h3>
-        </div>
-      </a>
+      <% }) %>
     </div>
   </div>
 </section>
 
-<!-- ─── FULL SCREEN QUOTE ────────────────────────────────────────────────── -->
-<section class="quote-section" id="statement-section">
-  <div class="quote-bg">
-    <img src="/images/service_tiling.png" alt="Tiling Excellence" />
+
+<!-- ─── RECENT PROJECTS (GALLERY PREVIEW) ─────────────────────────────────── -->
+<section class="section" style="position: relative;">
+  <div class="glow-orb orb-teal" style="width: 500px; height: 500px; top: -100px; right: -100px;"></div>
+  
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom: 60px;">
+      <span class="eyebrow">Portfolio</span>
+      <h2 class="section-title">Recent <em>Transformations</em></h2>
+    </div>
+
+    <div class="gallery-masonry">
+      <!-- Item 1 -->
+      <a href="/gallery" class="gallery-item reveal">
+        <img src="/images/service_landscaping_action.png" alt="Landscape Design" loading="lazy" />
+        <div class="gallery-overlay">
+          <h4>Premium Landscaping</h4>
+          <span>Outdoor Living</span>
+        </div>
+      </a>
+      <!-- Item 2 -->
+      <a href="/gallery" class="gallery-item reveal" style="transition-delay: 100ms;">
+        <img src="/images/service_rendering_action.png" alt="House Rendering" loading="lazy" />
+        <div class="gallery-overlay">
+          <h4>Facade Rendering</h4>
+          <span>Finishing Touch</span>
+        </div>
+      </a>
+      <!-- Item 3 -->
+      <a href="/gallery" class="gallery-item reveal" style="transition-delay: 200ms;">
+        <img src="/images/service_tiling_action.png" alt="Tiling" loading="lazy" />
+        <div class="gallery-overlay">
+          <h4>Precision Tiling</h4>
+          <span>Interior & Exterior</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="text-center reveal" style="margin-top: 50px;">
+      <a href="/gallery" class="btn btn-outline">View Full Gallery</a>
+    </div>
   </div>
-  <div class="container quote-content reveal">
-    <h2 class="quote-text">
-      "True craftsmanship is invisible. You don't see the work, you only feel the elegance of the result."
-    </h2>
-    <span class="quote-author">— TD HANDYMAN</span>
+</section>
+
+<!-- ─── TESTIMONIALS & CTA (CINEMATIC) ────────────────────────────────────── -->
+<section class="section" style="padding: 0; position: relative;">
+  
+  <div style="position: absolute; inset: 0; z-index: 0;">
+    <img src="/images/service_painting_action.png" alt="Testimonials Background" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%);" />
+    <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(3,10,13,0.98) 0%, rgba(3,10,13,0.8) 50%, rgba(15,138,126,0.3) 100%);"></div>
+  </div>
+
+  <div class="container" style="position: relative; z-index: 1; padding: 100px 0;">
+    
+    <div class="text-center reveal" style="margin-bottom: 60px;">
+      <span class="eyebrow">Client Feedback</span>
+      <h2 class="section-title" style="color: #fff;">Words of <em>Trust</em></h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 100px;">
+      <!-- Testimonial 1 -->
+      <div class="reveal" style="background: rgba(3, 10, 13, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); padding: 40px; border-radius: var(--radius-lg); box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+        <div style="color: var(--accent); margin-bottom: 20px;">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #fff; margin-bottom: 24px; font-style: italic;">"The level of craftsmanship is unmatched. They transformed our entire backyard and retained all the sloping earth perfectly."</p>
+        <div style="font-family: var(--font-heading); color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase;">— Michael R.</div>
+      </div>
+      
+      <!-- Testimonial 2 -->
+      <div class="reveal" style="transition-delay: 100ms; background: rgba(3, 10, 13, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); padding: 40px; border-radius: var(--radius-lg); box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+        <div style="color: var(--accent); margin-bottom: 20px;">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #fff; margin-bottom: 24px; font-style: italic;">"Professional, reliable, and incredibly detail-oriented. The rendering and painting work completely modernized our home's facade."</p>
+        <div style="font-family: var(--font-heading); color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase;">— Sarah & James</div>
+      </div>
+    </div>
+
+    <!-- Glowing CTA Panel -->
+    <div class="reveal" style="position: relative; background: linear-gradient(135deg, rgba(15,138,126,0.9), rgba(15,138,126,0.4)); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-lg); padding: 60px 40px; text-align: center; box-shadow: 0 30px 60px rgba(15,138,126,0.2); overflow: hidden;">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at top right, rgba(255,255,255,0.2), transparent); pointer-events: none;"></div>
+      
+      <h2 style="font-family: var(--font-heading); font-size: 3rem; color: #fff; margin-bottom: 16px;">Ready to Elevate Your Property?</h2>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">Contact our expert team today for a comprehensive consultation and transparent quote.</p>
+      
+      <a href="/contact" class="btn btn-white" style="padding: 18px 40px; font-size: 1.1rem;">Get a Free Quote</a>
+    </div>
+
   </div>
 </section>
 

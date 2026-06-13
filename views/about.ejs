@@ -12,10 +12,13 @@
 </section>
 
 <!-- ─── ABOUT STORY ──────────────────────────────────────────────────────── -->
-<section class="section">
+<section class="section" style="position: relative; overflow: hidden;">
+  <!-- Glowing Orbs -->
+  <div class="glow-orb orb-teal" style="width: 600px; height: 600px; top: -10%; left: -10%;"></div>
+
   <div class="container">
     <div class="about-grid">
-      <div class="reveal">
+      <div class="reveal" style="position: relative; z-index: 2;">
         <h2 class="section-title">Over a Decade of<br><em>Craftsmanship</em></h2>
         <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 24px;">
           TD HANDYMAN was founded with a singular vision: to bring exceptional quality and unparalleled reliability to property maintenance in South East Melbourne. 
@@ -26,30 +29,43 @@
         
         <div style="margin-top: 40px; border-top: 1px solid var(--border-light); padding-top: 24px;">
           <span style="font-family: var(--font-heading); font-size: 1.5rem; display: block; margin-bottom: 4px;">TD HANDYMAN</span>
-          <span style="font-family: var(--font-body); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-gold);">Founders & Master Craftsmen</span>
+          <span style="font-family: var(--font-body); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent);">Founders & Master Craftsmen</span>
         </div>
       </div>
       
-      <div class="reveal" style="position: relative; padding: 40px;">
-        <!-- Image with Border Frame -->
-        <div style="position: absolute; top: 0; left: 0; width: 60%; height: 60%; border-top: 1px solid var(--accent-gold); border-left: 1px solid var(--accent-gold);"></div>
-        <div style="position: absolute; bottom: 0; right: 0; width: 60%; height: 60%; border-bottom: 1px solid var(--accent-gold); border-right: 1px solid var(--accent-gold);"></div>
-        <img src="/images/about_team_new.png" alt="Team at work" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; filter: grayscale(20%); position: relative; z-index: 1;" />
+      <div class="reveal" style="position: relative; padding: 0;">
+        <!-- Cinematic Image Panel -->
+        <div class="service-image-card" style="min-height: 600px; border-radius: var(--radius-lg); overflow: hidden;">
+          <div class="sic-bg">
+            <img src="/images/about_team_new.png" alt="Team at work" style="object-position: center top;" />
+          </div>
+          <div class="sic-content" style="background: linear-gradient(to top, rgba(3,10,13,0.9), transparent); padding-top: 100px;">
+            <div style="display: flex; gap: 20px; align-items: center;">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h4 style="color: #fff; font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 4px;">Trusted Experts</h4>
+                <div style="color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;">South East Melbourne</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ─── STATS SECTION ────────────────────────────────────────────────────── -->
-<section class="section section-bg-alt">
+<section class="section section-bg-alt" style="border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
   <div class="container">
     <div class="about-stats reveal">
       <div style="text-align: center;">
-        <div class="stat-num">10+</div>
+        <div class="stat-num" style="background: linear-gradient(135deg, var(--accent), var(--accent-alt)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">10+</div>
         <div class="stat-label">Years of Experience</div>
       </div>
       <div style="text-align: center;">
-        <div class="stat-num">1000+</div>
+        <div class="stat-num" style="background: linear-gradient(135deg, var(--accent), var(--accent-alt)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">1000+</div>
         <div class="stat-label">Projects Completed</div>
       </div>
     </div>
@@ -57,40 +73,54 @@
 </section>
 
 <!-- ─── OUR VALUES ───────────────────────────────────────────────────────── -->
-<section class="section">
+<section class="section" style="position: relative; overflow: hidden;">
+  <div class="glow-orb orb-blue" style="width: 500px; height: 500px; bottom: 0; right: -10%;"></div>
   <div class="container">
-    <div class="text-center reveal">
+    <div class="text-center reveal" style="margin-bottom: 60px;">
       <span class="eyebrow">Our Principles</span>
       <h2 class="section-title">The TD HANDYMAN <em>Difference</em></h2>
     </div>
     
-    <div class="values-grid">
+    <div class="services-grid-8" style="grid-template-columns: repeat(2, 1fr);">
+      
       <!-- Value 1 -->
-      <div class="value-card reveal">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 12px;">Premium Quality</h3>
-        <p style="color: var(--text-secondary); font-size: 0.9rem;">We never compromise on materials or technique. Every project is executed to the highest standard.</p>
+      <div class="service-image-card reveal" style="min-height: 350px;">
+        <div class="sic-bg"><img src="/images/service_painting_action.png" alt="Premium Quality"></div>
+        <div class="sic-content">
+          <div class="sic-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <h3 class="sic-title">Premium Quality</h3>
+          <p class="sic-desc">We never compromise on materials or technique. Every project is executed to the highest standard.</p>
+        </div>
       </div>
       
       <!-- Value 2 -->
-      <div class="value-card reveal" style="transition-delay: 100ms;">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 12px;">Reliability</h3>
-        <p style="color: var(--text-secondary); font-size: 0.9rem;">We show up when we say we will, complete the job on schedule, and communicate transparently throughout.</p>
+      <div class="service-image-card reveal" style="transition-delay: 100ms; min-height: 350px;">
+        <div class="sic-bg"><img src="/images/service_maintenance_action.png" alt="Reliability"></div>
+        <div class="sic-content">
+          <div class="sic-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3 class="sic-title">Reliability</h3>
+          <p class="sic-desc">We show up when we say we will, complete the job on schedule, and communicate transparently.</p>
+        </div>
       </div>
 
       <!-- Value 3 -->
-      <div class="value-card reveal" style="transition-delay: 200ms;">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 12px;">Fully Insured</h3>
-        <p style="color: var(--text-secondary); font-size: 0.9rem;">Total peace of mind. We are fully licensed, insured, and compliant with all Australian building standards.</p>
+      <div class="service-image-card reveal" style="transition-delay: 200ms; min-height: 350px;">
+        <div class="sic-bg"><img src="/images/service_rendering_action.png" alt="Fully Insured"></div>
+        <div class="sic-content">
+          <div class="sic-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3 class="sic-title">Fully Insured</h3>
+          <p class="sic-desc">Total peace of mind. We are fully licensed, insured, and compliant with all building standards.</p>
+        </div>
       </div>
 
       <!-- Value 4 -->
-      <div class="value-card reveal" style="transition-delay: 300ms;">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 12px;">Expert Team</h3>
-        <p style="color: var(--text-secondary); font-size: 0.9rem;">Our crew consists of experienced, respectful professionals who treat your property with the utmost care.</p>
+      <div class="service-image-card reveal" style="transition-delay: 300ms; min-height: 350px;">
+        <div class="sic-bg"><img src="/images/service_landscaping_action.png" alt="Expert Team"></div>
+        <div class="sic-content">
+          <div class="sic-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3 class="sic-title">Expert Team</h3>
+          <p class="sic-desc">Our crew consists of experienced, respectful professionals who treat your property with care.</p>
+        </div>
       </div>
     </div>
   </div>

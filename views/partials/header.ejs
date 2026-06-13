@@ -22,7 +22,7 @@
   <script>
     (function() {
       const savedTheme = localStorage.getItem('theme');
-      let activeTheme = 'dark'; // Default to dark for luxury feel
+      let activeTheme = 'light'; // Default to light theme as requested
       if (savedTheme) {
         activeTheme = savedTheme;
       }
@@ -30,7 +30,7 @@
       
       const metaThemeColor = document.querySelector('meta[name="theme-color"]');
       if (metaThemeColor) {
-        metaThemeColor.setAttribute('content', activeTheme === 'light' ? '#F4F7FA' : '#050914');
+        metaThemeColor.setAttribute('content', activeTheme === 'light' ? '#F5F9FA' : '#030a0d');
       }
     })();
   </script>
@@ -41,17 +41,10 @@
 <nav class="navbar" id="navbar">
   <div class="nav-container">
     <!-- Logo -->
-    <a href="/" class="nav-logo" id="nav-logo">
-      <div class="logo-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="18" cy="18" r="18" fill="var(--accent-gold)"/>
-          <path d="M10 16 L18 10 L26 16 V26 H10 V16 Z" fill="var(--bg-primary)" fill-opacity="0.95"/>
-          <path d="M16 26 V18 H20 V26" fill="var(--accent-gold)"/>
-        </svg>
-      </div>
-      <div class="logo-text">
-        <span class="logo-main">TD HANDYMAN</span>
-        <span class="logo-sub">Property Services</span>
+    <a href="/" class="nav-logo" id="nav-logo" style="display: flex; align-items: center; gap: 15px; text-decoration: none;">
+      <img src="/images/logo.png" alt="TD Handyman Logo" style="height: 50px; width: auto; display: block;" />
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <span style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--accent); letter-spacing: 0.05em; line-height: 1.1;">TD HANDYMAN</span>
       </div>
     </a>
 

@@ -13,88 +13,103 @@
 
 <!-- ─── SERVICES LIST ────────────────────────────────────────────────────── -->
 <section class="section" style="padding-top: 0;">
+  <!-- Glowing Orbs -->
+  <div class="glow-orb orb-teal" style="width: 500px; height: 500px; top: 10%; right: -10%;"></div>
+  <div class="glow-orb orb-blue" style="width: 600px; height: 600px; bottom: 20%; left: -20%;"></div>
+
   <div class="container">
-    <div class="service-list">
+    <div class="services-grid-2">
       
-      <!-- Service 1: Landscaping -->
-      <div class="service-row" id="landscaping">
-        <div class="service-text reveal">
-          <span class="service-meta">01 / Outdoor Living</span>
-          <h2>Landscaping</h2>
-          <p>
-            We sculpt outdoor spaces that breathe life into your property. From lush garden beds to comprehensive landscape architecture, our approach ensures harmony between nature and structure.
-          </p>
-          <ul class="service-features">
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Complete Garden Design</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Premium Turf Installation</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Hardscaping & Paths</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Plant Selection</li>
-          </ul>
-        </div>
-        <div class="service-image reveal" style="transition-delay: 200ms;">
-          <img src="/images/service_landscaping.png" alt="Premium Landscaping" />
-        </div>
-      </div>
+      <% const pageServices = [
+        { 
+          name: 'Landscaping & Design', 
+          meta: '01 / Outdoor Living',
+          desc: 'We sculpt outdoor spaces that breathe life into your property. From lush garden beds to comprehensive landscape architecture.', 
+          img: '/images/service_landscaping_action.png', 
+          icon: 'M12 2L2 22h20L12 2z',
+          features: ['Complete Garden Design', 'Premium Turf Installation', 'Hardscaping & Paths', 'Plant Selection']
+        },
+        { 
+          name: 'Retaining Walls', 
+          meta: '02 / Structural Integrity',
+          desc: 'Structural excellence meets aesthetic appeal. Our retaining walls are engineered for longevity.', 
+          img: '/images/service_retaining_walls_action.png', 
+          icon: 'M4 4h16v16H4z',
+          features: ['Concrete Sleepers', 'Natural Stone Walls', 'Timber Solutions', 'Earthworks & Drainage']
+        },
+        { 
+          name: 'Rendering & Finishes', 
+          meta: '03 / Finishing Touch',
+          desc: 'Completely transform the facade of your property. We apply flawless, modern rendering finishes.', 
+          img: '/images/service_rendering_action.png', 
+          icon: 'M3 12h18M3 6h18M3 18h18',
+          features: ['Acrylic & Cement Render', 'Facade Modernisation', 'Feature Walls', 'Texture Coating']
+        },
+        { 
+          name: 'Tiling & Stonework', 
+          meta: '04 / Precision Craft',
+          desc: 'From expansive outdoor patios to intricate interior tiling. Meticulous attention to detail ensures perfect alignment.', 
+          img: '/images/service_tiling_action.png', 
+          icon: 'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z',
+          features: ['Porcelain & Ceramic', 'Natural Stone Tiling', 'Bathroom Renovation', 'Outdoor Paving']
+        },
+        { 
+          name: 'Premium Painting', 
+          meta: '05 / Flawless Color',
+          desc: 'Interior and exterior painting services executed with precision, using only premium quality paints.', 
+          img: '/images/service_painting_action.png', 
+          icon: 'M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z',
+          features: ['Interior Repaints', 'Exterior Facades', 'Woodwork & Trims', 'Color Consultation']
+        },
+        { 
+          name: 'General Maintenance', 
+          meta: '06 / Reliable Care',
+          desc: 'Ongoing property upkeep and expert repair services to ensure your home remains in pristine condition.', 
+          img: '/images/service_maintenance_action.png', 
+          icon: 'M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 9.36l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 9.36-7.94l-3.77 3.77a1 1 0 0 0 0 1.41z',
+          features: ['Carpentry Repairs', 'Deck Restorations', 'Fixture Installations', 'Routine Upkeep']
+        },
+        { 
+          name: 'Irrigation Systems', 
+          meta: '07 / Smart Watering',
+          desc: 'Automated, highly efficient watering solutions to keep your landscapes lush, green, and thriving year-round.', 
+          img: '/images/service_irrigation_action.png', 
+          icon: 'M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z',
+          features: ['Automated Sprinklers', 'Drip Irrigation', 'System Maintenance', 'Water Efficiency']
+        },
+        { 
+          name: 'Architectural Moulding', 
+          meta: '08 / Elegant Accents',
+          desc: 'Elegant architectural wainscoting and modern wall paneling to add luxury character to any room.', 
+          img: '/images/service_moulding_action.png', 
+          icon: 'M4 4h16v16H4z M8 8h8v8H8z',
+          features: ['Feature Wainscoting', 'Modern Paneling', 'Skirting & Architraves', 'Custom Carpentry']
+        }
+      ] %>
 
-      <!-- Service 2: Retaining Walls -->
-      <div class="service-row reverse" id="retaining-walls">
-        <div class="service-text reveal">
-          <span class="service-meta">02 / Structural Integrity</span>
-          <h2>Retaining Walls</h2>
-          <p>
-            Structural excellence meets aesthetic appeal. Our retaining walls are engineered for longevity and designed to complement the architectural language of your home.
-          </p>
-          <ul class="service-features">
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Concrete Sleepers</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Natural Stone Walls</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Timber Solutions</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Earthworks & Drainage</li>
-          </ul>
-        </div>
-        <div class="service-image reveal" style="transition-delay: 200ms;">
-          <img src="/images/service_retaining_walls.png" alt="Retaining Walls" />
-        </div>
-      </div>
+      <% pageServices.forEach((s, i) => { %>
+        <div class="service-image-card reveal" style="transition-delay: <%= i * 50 %>ms; min-height: 550px;">
+          <div class="sic-bg">
+            <img src="<%= s.img %>" alt="<%= s.name %>" loading="lazy">
+          </div>
+          <div class="sic-content">
+            <div style="font-family: var(--font-body); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; font-weight: 600;"><%= s.meta %></div>
+            <h3 class="sic-title" style="font-size: 2rem;"><%= s.name %></h3>
+            <p class="sic-desc" style="font-size: 1.05rem; margin-bottom: 16px;"><%= s.desc %></p>
+            
+            <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; color: #fff; font-size: 0.9rem; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; opacity: 0.9;">
+              <% s.features.forEach(f => { %>
+                <li style="display: flex; align-items: center; gap: 8px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  <%= f %>
+                </li>
+              <% }) %>
+            </ul>
 
-      <!-- Service 3: Rendering -->
-      <div class="service-row" id="rendering">
-        <div class="service-text reveal">
-          <span class="service-meta">03 / Finishing Touch</span>
-          <h2>Rendering & Painting</h2>
-          <p>
-            Completely transform the facade of your property. We apply flawless, modern rendering and precision painting that dramatically elevates curb appeal and value.
-          </p>
-          <ul class="service-features">
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Acrylic & Cement Render</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Facade Modernisation</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Interior Repaints</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Texture Coating</li>
-          </ul>
+            <a href="/contact" class="btn btn-primary" style="align-self: flex-start;">Request a Quote</a>
+          </div>
         </div>
-        <div class="service-image reveal" style="transition-delay: 200ms;">
-          <img src="/images/service_rendering.png" alt="Rendering and Painting" />
-        </div>
-      </div>
-
-      <!-- Service 4: Tiling -->
-      <div class="service-row reverse" id="tiling">
-        <div class="service-text reveal">
-          <span class="service-meta">04 / Precision Craft</span>
-          <h2>Tiling & Wall Moulding</h2>
-          <p>
-            From expansive outdoor patios to intricate interior wainscoting. Our meticulous attention to detail ensures perfect alignment, seamless grout lines, and flawless architectural accents.
-          </p>
-          <ul class="service-features">
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Porcelain & Ceramic</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Natural Stone Tiling</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Feature Wainscoting</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Skirting & Architraves</li>
-          </ul>
-        </div>
-        <div class="service-image reveal" style="transition-delay: 200ms;">
-          <img src="/images/service_tiling.png" alt="Tiling and Wall Moulding" />
-        </div>
-      </div>
+      <% }) %>
 
     </div>
   </div>
