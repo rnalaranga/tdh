@@ -508,9 +508,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   // ============================================
-  // THEME TOGGLE
+  // THEME TOGGLE & TOOLTIP
   // ============================================
   const themeToggle = document.getElementById('theme-toggle');
+  
+  // Animate tooltip friendly popup
+  setTimeout(() => {
+    const tooltip = document.getElementById('theme-tooltip');
+    if(tooltip) {
+      tooltip.style.opacity = '1';
+      tooltip.style.transform = 'translateY(0)';
+      
+      // Hide after 5 seconds
+      setTimeout(() => {
+        tooltip.style.opacity = '0';
+        tooltip.style.transform = 'translateY(-10px)';
+      }, 5000);
+    }
+  }, 1500);
+
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
       const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -521,7 +537,13 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const metaThemeColor = document.querySelector('meta[name="theme-color"]');
       if (metaThemeColor) {
-        metaThemeColor.setAttribute('content', newTheme === 'light' ? '#F4F7FA' : '#050914');
+        metaThemeColor.setAttribute('content', newTheme === 'light' ? '#081754' : '#030a0d');
+      }
+      
+      // Hide tooltip early if they click the button
+      const tooltip = document.getElementById('theme-tooltip');
+      if (tooltip) {
+        tooltip.style.opacity = '0';
       }
     });
   }

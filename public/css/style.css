@@ -314,17 +314,18 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   z-index: 1000;
   padding: 20px 0;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(25px) saturate(180%);
-  -webkit-backdrop-filter: blur(25px) saturate(180%);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.7); /* Slightly more transparent */
+  backdrop-filter: blur(40px) saturate(200%); /* Stronger blur */
+  -webkit-backdrop-filter: blur(40px) saturate(200%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* White glass edge */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); /* Soft drop shadow */
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .navbar.scrolled {
   padding: 12px 0;
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 10px 30px rgba(8, 23, 84, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 40px rgba(8, 23, 84, 0.1);
 }
 
 [data-theme="dark"] .navbar.scrolled {
@@ -1266,10 +1267,21 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   /* Hamburger Color */
-  .hamburger span { background: #fff; }
+  .hamburger span { background: var(--accent); }
   
-  /* Hide logo text on mobile to prevent overflow */
-  .mobile-hide-logo-text { display: none !important; }
+  /* Scale logo elegantly on mobile instead of hiding */
+  .nav-logo img { height: 36px !important; }
+  .mobile-hide-logo-text span { font-size: 1.1rem !important; }
+  .nav-logo { gap: 10px !important; }
+  
+  /* Hero Section Aesthetics */
+  .page-hero { 
+    padding-top: 75px !important; 
+    padding-bottom: 60px !important; 
+    min-height: auto !important;
+  }
+  .hero-title-large { font-size: 3rem !important; }
+  .hero-content > div { gap: 40px !important; }
 }
 
 [data-theme="light"] .navbar.scrolled .hamburger span {

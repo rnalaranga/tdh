@@ -22,7 +22,8 @@
   <script>
     (function() {
       const savedTheme = localStorage.getItem('theme');
-      let activeTheme = 'light'; // Default to light theme as requested
+      // Respect system preference if no saved theme
+      let activeTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       if (savedTheme) {
         activeTheme = savedTheme;
       }
@@ -30,7 +31,8 @@
       
       const metaThemeColor = document.querySelector('meta[name="theme-color"]');
       if (metaThemeColor) {
-        metaThemeColor.setAttribute('content', activeTheme === 'light' ? '#F5F9FA' : '#030a0d');
+        // Use Navy Blue (#081754) for light mode, dark (#030a0d) for dark mode
+        metaThemeColor.setAttribute('content', activeTheme === 'light' ? '#081754' : '#030a0d');
       }
     })();
   </script>
@@ -58,7 +60,7 @@
     </ul>
 
     <!-- Actions: Theme & Hamburger -->
-    <div style="display: flex; align-items: center; gap: 20px;">
+    <div style="display: flex; align-items: center; gap: 20px; position: relative;">
       <!-- Theme Toggle -->
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
         <!-- Sun icon (shown in dark theme) -->
@@ -66,6 +68,12 @@
         <!-- Moon icon (shown in light theme) -->
         <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
+
+      <!-- Friendly Theme Popup Message -->
+      <div id="theme-tooltip" style="position: absolute; top: 55px; right: 40px; background: var(--accent); color: #fff; padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; width: 220px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2); z-index: 1002; opacity: 0; transform: translateY(-10px); transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); pointer-events: none;">
+        Hi! 👋 You can switch between Dark & Light modes here!
+        <div style="position: absolute; top: -5px; right: 28px; width: 12px; height: 12px; background: var(--accent); transform: rotate(45deg);"></div>
+      </div>
 
       <!-- Hamburger -->
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
