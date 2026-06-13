@@ -1252,4 +1252,20 @@ h1, h2, h3, h4, h5, h6 {
   .footer-grid { grid-template-columns: 1fr; gap: 40px; }
   .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
   .services-grid-8, .services-grid-2 { grid-template-columns: 1fr; gap: 20px; }
+  
+  /* Mobile Hero Buttons */
+  .hero-actions { flex-direction: column; width: 100%; }
+  .hero-actions .btn { 
+    width: 100%; 
+    text-align: center; 
+    padding: 14px 24px !important; 
+    font-size: 1rem !important; 
+  }
+  
+  /* Hamburger Color */
+  .hamburger span { background: #fff; }
+}
+
+[data-theme="light"] .navbar.scrolled .hamburger span {
+  background: var(--text-primary);
 }
