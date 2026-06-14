@@ -426,6 +426,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.9rem !important;
+  white-space: nowrap;
   box-shadow: 0 10px 20px rgba(8, 23, 84, 0.2);
   margin-left: 15px;
   transition: var(--transition);
@@ -1247,6 +1248,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Responsive --- */
 @media (max-width: 1024px) {
+  .nav-links { gap: 15px; }
+  .nav-cta { padding: 12px 20px !important; margin-left: 5px; font-size: 0.8rem !important; letter-spacing: 0.05em; }
   .masonry-grid { grid-template-columns: repeat(2, 1fr); }
   .masonry-item:nth-child(3) { margin-top: 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
