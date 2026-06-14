@@ -1248,17 +1248,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Responsive --- */
 @media (max-width: 1024px) {
-  .nav-links { gap: 15px; }
-  .nav-cta { padding: 12px 20px !important; margin-left: 5px; font-size: 0.8rem !important; letter-spacing: 0.05em; }
   .masonry-grid { grid-template-columns: repeat(2, 1fr); }
   .masonry-item:nth-child(3) { margin-top: 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .services-grid-8 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-}
-
-@media (max-width: 768px) {
-  :root { --section-py: 80px; }
   
+  :root { --section-py: 80px; }
   html, body { overflow-x: hidden; width: 100%; }
 
   .nav-links {
